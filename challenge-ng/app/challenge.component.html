@@ -1,0 +1,29 @@
+<article *ngFor="let profile of candidates.profiles; let i = index" class="col-md-6 item">
+    <div class="">
+        <section class="row">
+            <div class="col-md-3">
+                <h2>{{profile.party}}</h2>
+            </div>
+            <div class="col-md-9">
+                <p>Wahlkreis: {{profile.constituency.name}}</p>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-md-3 photo">
+                <img src="{{profile.personal.picture.url}}"/>
+            </div>
+            <div class="col-md-9">
+                <div class="person">
+                    <h3>{{profile.personal.first_name}} {{profile.personal.last_name}}</h3>
+                    <p>Beruf: {{profile.personal.profession}}</p>
+                    <p>Geburtsjahr: {{profile.personal.birthyear}}</p>
+                </div>
+                <div class="hintergrund">
+                    <p>Ausbildung: {{profile.personal.education}}</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</article>
+
+<pre>{{candidates.profiles | json}}</pre>
