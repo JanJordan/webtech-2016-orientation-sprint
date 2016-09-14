@@ -1,0 +1,1520 @@
+//output:index.html, pretty:true
+
+// 
+// this is generated with pug, formerly known as jade - https://pugjs.org
+// and rendered with reveal.js - http://lab.hakim.se/reveal-js/
+// ..many thanks for your great work
+// done@datawerk.de
+
+doctype html
+html(lang='de')
+	head
+		meta(charset='utf-8')
+		title HTML5 / CSS3
+		meta(name='description', content='')
+		meta(name='author', content='jj')
+		meta(name='apple-mobile-web-app-capable', content='yes')
+		meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+		link(rel='stylesheet', href='reveal.js/css/reveal.css')
+		link#theme(rel='stylesheet', href='datawerk/css/theme/dw.css')
+		// Theme used for syntax highlighting of code
+		link(rel='stylesheet', href='reveal.js/lib/css/zenburn.css')
+		// Printing and PDF exports
+		script.
+			var link = document.createElement('link');
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match(/print-pdf/gi)
+			? 'reveal.js/css/print/pdf.css'
+			: 'reveal.js/css/print/paper.css';
+			document.getElementsByTagName('head')[0].appendChild(link);
+		//if lt IE 9
+			script(src='lib/js/html5shiv.js')
+	body(class="dw")
+		.footer	&copy; by 
+			a(href="http://www.datawerk.de" target="_blank") datawerk 
+			| 2016
+
+		.reveal
+			.slides
+				section(data-background='ressources/images/evolution.jpg' data-state="pre-page")
+					div.fragment(style="margin-top:600px;float:left")
+						p
+							mark 
+								a(target='_blank' href='http://www.evolutionoftheweb.com') http://www.evolutionoftheweb.com
+
+
+				section
+					div(style=' position:absolute;  margin-left:8rem; text-align: left; padding-bottom:3rem;')
+						img.brand(src='datawerk/brand/dw-logo-2013_x31.png')
+					div(style='  position:absolute;right:0; top:0; margin-right:8rem; text-align: right; padding-bottom:3rem;')
+						p
+							small 
+								a(href="mailto:kontakt@datawerk.de") Jan Jordan
+								br
+								a(href="mailto:kontakt@datawerk.de") Florin Peter
+					div(style=' margin-top:6rem ')
+						h2 HTML 5 / CSS 3
+						h3 Orientierungslauf 
+						h4 Sprint 1, Tag 1
+						p
+						img.borderless(style="width:30%;background-color:green" src='ressources/images/free_orienteering.png')
+
+				section
+					div
+						h2 Challenge:
+						h4.fragment 
+							blockquote "Wir bauen eine Web-App, die die Profile der Wahlkreis-Kandidaten zur Berliner Abgeordnetenhauswahl auflistet und anzeigt."
+						p.fragment
+							| auf dem Weg dahin:
+						ul.fragment 
+							li.unchecked (Fundamente) Web-Technologien 
+							li.unchecked (Struktur) HTML
+							li.unchecked (Styling) CSS
+							li.unchecked (Entwicklung) Web-Apps 
+
+				section
+					h3 HTTP - Hypertext Transfer Protocol
+					p.fragment 
+						i Request -> Response -> Request -> Response -> ...
+					p.fragment 
+						mark Grundablauf:
+						.fragment
+							img(src='http://www.oreilly.com/openbook/webclient/wcp_0302.gif')
+							p
+								small Bildquelle: 
+									a(href="http://www.oreilly.com/openbook/webclient/" target="_blank") "Web Client Programming with Perl"
+
+				section
+					h3 HTTP - Hypertext Transfer Protocol
+					p.fragment 
+						mark ..ist ein zustandsloses Protokoll. 
+					p.fragment 
+						i -> Informationen aus früheren Anforderungen gehen verloren.
+					.fragment
+						img(width="30%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Lost_main_title.svg/2000px-Lost_main_title.svg.png")    
+						p
+							small Bildquelle: 
+								a(href="https://en.wikipedia.org/wiki/Lost_(TV_series)" target="_blank") Wikipedia
+
+
+				section
+					h3 HTTP - Hypertext Transfer Protocol
+					p.fragment 
+						i ..dient zur Übertragung von Inhalten im Web zwischen Browser und Server
+					p.fragment 
+						mark ..ist unverschlüsselt:
+					.fragment
+						img(width="50%" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Postcard_Bermuda_1907_address.jpg")    
+						p
+							small Bildquelle: 
+								a(href="https://en.wikipedia.org/wiki/Lost_(TV_series)" target="_blank") Wikipedia
+					p.fragment 
+						mark ..die verschlüsselte Variante (HTTPS) basiert auf der Nutzung von server-seitigen Zertifikaten  
+
+				section
+					h3 HTTP - Hypertext Transfer Protocol
+					p.fragment 
+						i Methoden:
+					p.fragment GET, POST (HEAD, PUT, DELETE, u.a.)
+					ul.fragment 
+						i (wichtige) Statuscodes sind: 
+						li.fragment 2xx - erfolgreich
+						li.fragment 3xx - Umleitung (permanent, temporär, oft wichtig für SEO)
+						li.fragment 4xx - Client-Fehler (z.B. 404 nicht gefunden oder 403 nicht erlaubt)
+						li.fragment 5xx - Server-Fehler (interner Serverfehler)
+
+
+
+				section
+					h3 HTTP - Hypertext Transfer Protocol
+					p.fragment Wie identifizieren Anwendungen, 
+						br
+						| welcher Benutzer z.B. gerade ein Produkt in einen Warenkorb gelegt hat?             
+						br
+						| Wenn das Protokoll zustandslos ist? 
+					p.fragment 
+						i Ganz ohne state - kein Staat zu machen
+					p.fragment 
+						i ..zumindest bei serverseitigen Anwendungen
+
+				section
+					h3 HTTP - Hypertext Transfer Protocol
+					p.fragment 
+						i Session-State lässt sich im Server erzeugen mit:
+					p.fragment 
+						mark Session-Ids 
+						br
+						|(Parameter in der vom Browser aufgerufenen Url)
+					.fragment 
+						p 
+							mark Cookies 
+							br
+							|(Informationsfragmente im Browser die automatisch zum Server mitgeschickt werden)
+						img(width="25%" src="https://c2.staticflickr.com/6/5287/5333879388_1f7f37dc79_z.jpg")
+						p
+							small Bildquelle: 
+								a(href="https://www.flickr.com/photos/shellewill79/5333879388" target="_blank") Flickr
+
+
+
+				section
+					h3 HTTP - Hypertext Transfer Protocol
+					p.fragment 
+						i Wie ist das bei SPAs oder mit REST-APIs?
+						br  
+						mark header mit Tokens
+					p.fragment 
+						i Und es gibt (mittlerweile) auch permanente Verbindungen:
+						br  
+						mark Websockets 
+
+
+
+
+				section
+					h3 DOM - Document Object Model
+					p.fragment 
+						i Die Elemente einer im Browser geladenen HTML-Seite
+						br
+						i werden über eine definierte  
+							mark Schnittstelle
+							|  im Browser verfügbar gemacht:
+					table 
+						tr
+							td(style="vertical-align:top").fragment
+								pre(style="width:inherit;")
+									code.hljs(data-trim contenteditable)
+										|<table>
+										|  <thead>
+										|    <tr>
+										|      <th>Vorname</th>
+										|      <th>Name</th>
+										|    </tr>
+										|  </thead>
+										|  <tbody>
+										|    <tr>
+										|      <td>Donald</td>
+										|      <td>Duck</td>
+										|    </tr>
+										|  </tbody>
+										|</table>
+							td.fragment
+								img(style="background-color:white" width="100%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/DOM_Beispielbaum.svg/397px-DOM_Beispielbaum.svg.png")    
+								p
+									small Bildquelle: 
+										a(href="https://de.wikipedia.org/wiki/Document_Object_Model" target="_blank") Wikipedia
+
+				section
+					h3 DOM - Document Object Model
+					p.fragment 
+						i Es gibt unterschiedliche 
+							mark Typen von Nodes 
+							|  (Knoten) im DOM:
+					p.fragment Dokument, Dokumentfragment, Element, Attribut, Text
+					p.fragment 
+						i Diese stehen untereinandern in 
+							mark Beziehungen:
+					p.fragment root > parent > children
+					p.fragment 
+						i Eine Besonderheit: 
+						br
+						|Attribute sind 
+						mark Eigenschaften
+						br
+						i - aber keine children von Elementen     
+
+				section
+					h3 DOM - Document Object Model
+					p.fragment 
+						i Warum ist das alles so wichtig?
+					p.fragment 1: Die 
+						mark Darstellung im Browser
+						|  basiert darauf 
+					p.fragment 2: Die Struktur der Elementbaums ist gleichzeitig das Fundament für die Modifikation des Erscheinungsbildes per 
+						mark CSS 
+					p.fragment 3: Neue (und alte) Javascript-Bibliotheken und Frameworks arbeiten massiv auf Basis der 
+						mark Manipulation des DOMs
+						br
+						| z.B.
+						table
+							tr
+								td(style="text-align:right").fragment
+									small Alte Dinosaurier: jquery
+									br
+									img(style="background-color:white" width="40%" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Nanyangosaurus_dinosaur.png")
+									br
+									small Bildquelle: 
+										a(href="https://de.wikipedia.org/wiki/Nanyangosaurus" target="_blank") Wikipedia
+								td.fragment
+									small Junge Platzhirsche: angular.js
+									br
+									img(style="background-color:white" width="25%" src="https://upload.wikimedia.org/wikipedia/commons/7/75/Cervus_elaphus_Luc_Viatour_3.jpg")
+									br
+									small Bildquelle: 
+										a(href="https://de.wikipedia.org/wiki/Platzhirsch" target="_blank") Wikipedia
+
+
+
+
+
+				section
+					h3 Der Webbrowser
+					.fragment
+						p Es war einmal vor gar nicht so langer Zeit...
+					.fragment
+						img(style="background-color:white" width="25%" src="https://c2.staticflickr.com/4/3271/2818154005_7cc2cc90ef.jpg")    
+						br
+						small Bildquelle: 
+							a(href="https://www.flickr.com/photos/bradybd/2818154005" target="_blank") Flickr
+
+					p.fragment 
+						i Jeder Hersteller wollte etwas besonders gut können. Jede Version konnte etwas neues. Die Nutzer hatten verschiedene Browser in verschiedenen Versionen auf verschiedenen Systemen... 
+					p.fragment Anzahl Browser x Anzahl genutzte Versionen
+						br
+						small.fragment x Geräteklassen (Smartphones, Tablets, Autos...) 
+						br
+						.fragment Ergebnis: Auf jeden Fall zuviel, vielzuviel!
+		
+				section
+					h3 Der Webbrowser
+					p.fragment 
+						i Was kann man tun?: 
+
+					p.fragment Auf den Browser eingehen: 
+						br
+						mark
+							a(target="_blank" href="https://modernizr.com/") https://modernizr.com
+
+					p.fragment Ihm mehr beibringen: 
+						br
+						mark
+							a(target="_blank" href="https://de.wikipedia.org/wiki/Polyfill") Polyfills
+
+					p.fragment Und: "Eine neue Hoffnung!" 
+						br
+						mark 
+							a(target="_blank" href="http://eisenbergeffect.bluespire.com/evergreen-browsers/") Evergreen-Browser
+
+				section
+					h3 Der Webbrowser
+					p.fragment 
+						i Haben wir heute die dunkle Seite besiegt?
+						br 
+						.fragment eher nicht.. 
+					p.fragment 
+						i Aber es gibt bessere Lichtschwerter:
+						br 
+						.fragment
+							mark Developer Tools im Browser
+							p
+								img.brand(width="50%"  src='ressources/images/devtools.jpg')
+						.fragment
+							mark Und: Wissen ist Macht
+							p
+								a(target="_blank" href="http://caniuse.com/#search=flexbox") caniuse flexbox?
+
+
+				section
+					div
+						h2 Challenge:
+						h4 
+							blockquote "Wir bauen eine Web-App, die die Profile der Wahlkreis-Kandidaten zur Berliner Abgeordnetenhauswahl auflistet und anzeigt."
+						ul.fragment 
+							li.checked (Fundamente) Web-Technologien (check)
+							
+							li.unchecked (Struktur) HTML (gleich)
+							
+							li.unchecked (Styling) CSS (später)
+							
+							li.unchecked (Entwicklung) Web-Apps (später) 
+
+
+
+				section
+					h3 HTML - Grundgerüst von HTML-Dateien
+					p.fragment Doctype
+						br 
+						i.fragment ..wurde vor HTML5 benutzt, um externe Dokument-Typ-Definitionen einzubinden (XHTML)
+							pre(style="width:100%;")
+								code.hljs(html)
+									|&#x3C;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&#x3E;
+						br
+						
+					.fragment 
+						p Heute verwendet man (meist) nur noch HTML5:
+							br
+						pre(style="width:50%;")
+							code.hljs(html)
+								|&#x3C;!DOCTYPE html&#x3E;
+
+
+				section
+					h3 HTML - Grundgerüst von HTML-Dateien
+					p.fragment 
+						br 
+						i.fragment Basiselemente einer Seitenstruktur:
+							pre(style="width:80%;")
+								code.hljs()
+									|&#x3C;html lang="de"&#x3E;
+									|&#x3C;head&#x3E;
+									|  <meta charset="utf-8">
+									|  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+									|  <title>aussagekräftiger Titel der Seite</title>
+									|&#x3C;/head&#x3E;
+									|&#x3C;body&#x3E;
+									|  <!-- Sichtbarer Dokumentinhalt im body -->
+									|  <p>Sehen Sie sich den Quellcode dieser Seite an.
+									|    <bold>(Kontextmenu: Seitenquelltext anzeigen)</bold>
+									|  </p>
+									|&#x3C;/body&#x3E;
+									|</html>
+
+
+				section
+					h3 HTML - Elemente und Attribute
+					p.fragment 
+						i Ein Element setzt sich (normalerweise) aus einem öffnenden und einem schliessende Tag zusammen:
+							pre.fragment(style="width:80%;")
+								code.hljs()
+									|<tagname>Inhalte...</tagname>
+					p.fragment
+						i Elemente werden meist verschachtelt, um eine Hierarchie im Dokument auszudrücken:
+							pre.fragment(style="width:80%;")
+								code.hljs()
+									|<parent-tag>Inhalt A
+									|   <child-tag>Inhalt B&#x3C;br/&#x3E;</child-tag>
+									|   <child-tag>Inhalt C<br></child-tag>
+									|   <child-tag>Inhalt D></child-tag>
+									|</parent-tag>
+					p.fragment
+						i
+							small Manche Elemente haben keinen Inhalt, z.B. 
+							pre.fragment(style="width:80%;")
+								code.hljs()
+									|<br>, <img>, <hr>, <input>
+					p.fragment
+						i
+							small Elemente sollten generell immer geschlossen werden, auch die leeren Elemente. 
+								br
+								| Besser ist also die Schreibweise des br nach Inhalt B.
+							br
+							small.fragment Selbst wenn ein Browser den Inhalt vielleicht trotzdem korrekt anzeigt, kann es sein, 
+								br
+								| daß ein nachgelagerter komplexer Vorgang (z.B. ein Buildprozess) sonst fehlschlägt.
+							br
+							small.fragment Elemente sollten (!) nur in Kleinschrift benannt sein...
+
+
+
+				section
+					h3 HTML - Elemente und Attribute
+					p.fragment 
+						i Elemente haben (meist) Attribute, die sie "konfigurieren":
+							pre.fragment(style="width:80%;")
+								code.hljs()
+									|&#x3C;html lang="de"&#x3E;
+									|&#x3C;head&#x3E;
+									|  <meta charset="utf-8">
+									|  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+									|  <title>aussagekräftiger Titel der Seite</title>
+									|&#x3C;/head&#x3E;
+									|&#x3C;body style="background-color:blue" &#x3E;
+									|  <!-- Sichtbarer Dokumentinhalt im body -->
+									|  <p class="important">Sehen Sie sich den Quellcode dieser Seite an.
+									|    <bold>(Kontextmenu: Seitenquelltext anzeigen)</bold>
+									|  </p>
+									|&#x3C;/body&#x3E;
+									|</html>
+
+						p.fragment
+							small.fragment Die Datei wird als HTML5 definiert und sollte(..) mit dem Zeichensatz UTF-8 angezeigt werden. 
+							br
+							p.fragment
+								small Im unsichtbaren Bereich (HEAD) werden auch die Anzeigebreite und Skalierung angemeldet
+									br
+									| Basis für die Nutzung von Media-Queries im Responsive Design. 
+							small.fragment Der Hintergrund des sichtbaren Bereiches (BODY) erhält über einen inline-style die Farbe blau, was meist keine gute Idee ist..
+							br
+							small.fragment Der erste Absatz erhält die Klasse "important", dies ändert aber nicht die Farbe der Schrift..
+							br
+							small.fragment Und dann wäre da noch der Kommentar, der im Browser nicht angezeigt wird, aber im Code der Seite ausgeliefert wird..
+
+
+				section
+					h3 HTML - Element-Typen 
+					p.fragment 
+						i Elemente haben unterschiedliche Grundeinstellungen in Bezug auf Ihre Anzeige und den Zeilenlauf
+					p.fragment 
+						mark Block-level Elemente 
+						br
+						span div, h1..h6, p, form ...
+						br
+						i ..beginnen in einer neuen Zeile und nehmen den vollen Platz in der Breite ein 
+
+					p.fragment 
+						mark inline Elemente 
+						br
+						span span, a, img ...
+						br
+						i ..beginnen nicht in einer neuen Zeile und nehmen nur den Platz ein, den sie benötigen 
+
+
+				section
+					h3 Grundlegende HTML-Elemente 
+					p.fragment 
+						mark div
+						p.fragment 
+							i ..wird sehr of benutzt, um Blöcke von Inhalten zu bilden,
+								br
+								| die dann per CSS gestaltet werden. 
+							br
+							i ..verhält sich "visuell neutral" solange das styling nichts vorgibt. 
+						pre.fragment(style="width:80%;")
+							code.hljs()
+								|<div class="profil container">
+								|   <div class="photo head"></div>
+								|   <div class="person infos"></div>
+								|</div>
+
+				section
+					h3 Grundlegende HTML-Elemente 
+					p.fragment 
+						mark span
+						p.fragment 
+							i ..wird benutzt, um hintereinander fliessende Inhalte 
+								br
+								| miteinander zu kombinieren.
+							br
+							i ..verhält sich ebenfalls "visuell neutral". 
+						pre.fragment(style="width:80%;")
+							code.hljs()
+								|<span class="fullname">
+								|   <span class="firstname"></span>&nbsp;
+								|   <span class="lastname"></span>
+								|</span>
+
+				section
+					h3 Grundlegende HTML-Elemente 
+					p.fragment 
+						mark a (anchor)
+						p.fragment 
+							i ..Links zu Urls oder im Dokument,
+							br
+							i bietet mittlerweile einige Rafinessen: 
+						pre.fragment(style="width:80%;")
+							code.hljs()
+								|<p>
+								|   <a class="fullname" title="zum Profil" href="profil/4711">
+								|   <span class="firstname"></span>
+								|   <span class="lastname"></span>
+								|   </a>
+								|</p>
+								|<p><a href="tel:+499123456789" target="_blank">Telefon: 09123 456789</a></p>
+								|<p><a title="XING Profil" href="https://www.xing.com" 
+								|      target="_blank">zu XING</a></p>
+
+
+
+				section
+					h3 Neue HTML5-Elemente 
+					p.fragment 
+						span ..über 30 neue Elemente und diverse Attribute kamen mit HTML5 dazu
+						p.fragment 
+							i Hier eine Auswahl der Elemente die speziell für die Strukturierung von Inhalten gedacht sind:
+						p
+							mark.fragment header
+							mark.fragment nav
+							mark.fragment main
+							mark.fragment section
+							mark.fragment article
+							mark.fragment aside
+							mark.fragment footer
+							p.fragment 
+								i Am besten wir benutzen einige dann gleich, um unser Frontend für die Challenge zu bauen..
+
+
+
+
+
+				section
+					h3 HTML - Externe Stylesheets einbinden
+					p.fragment 
+						i Style-Informationen können direkt im Dokument eingebettet werden, normalerweise werden Styles aber in CSS-Dateien ausgelagert:
+							pre.fragment(style="width:80%;")
+								code.hljs()
+									|&#x3C;html lang="de"&#x3E;
+									|&#x3C;head&#x3E;
+									|  <meta charset="utf-8">
+									|  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+									|  <title>aussagekräftiger Titel der Seite</title>
+									|  <style>
+									|     notification { color: green; }
+									|  </style>
+									|  <link rel="stylesheet" href="stylesheet.css">
+									|&#x3C;/head&#x3E;
+									|&#x3C;body style="background-color:blue" &#x3E;
+									|  <!-- Sichtbarer Dokumentinhalt im body -->
+									|  <p class="important">Sehen Sie sich den Quellcode dieser Seite an.
+									|    <bold>(Kontextmenu: Seitenquelltext anzeigen)</bold>
+									|  </p>
+									|&#x3C;/body&#x3E;
+									|</html>
+
+						p.fragment
+							small.fragment Eine Datei mit Styleinformationen ist nun mit der Seite verbunden. 
+							br
+							small.fragment Der Browser verwendet diese, um die Oberfläche der Seite zu modifizieren.
+							br
+							small.fragment Wenn wir in der Datei "stylesheet.css" ein ".important: {color:red}" hinzufügen, wird der Absatz in rot angezeigt.
+
+
+				section
+					h3 HTML - Externes Javascript einbinden
+					p.fragment 
+						i Auch Javascript kann direkt im Dokument eingebettet werden, komplexere Funktionen werden aber auch hier meist als js-Dateien eingebunden:
+							pre.fragment(style="width:85%;")
+								code.hljs()
+									|&#x3C;html lang="de"&#x3E;
+									|&#x3C;head&#x3E;
+									|  <meta charset="utf-8">
+									|  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+									|  <title>aussagekräftiger Titel der Seite</title>
+									|  <script>
+									|    console.log("HEAD says: Hello World! ");
+									|  </script>
+									|  <noscript>
+									|    Wie soll das gehen? - Sie haben JavaScript deaktiviert!
+									|  </noscript>
+									|  <script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+									|&#x3C;/head&#x3E;
+									|&#x3C;body style="background-color:blue" &#x3E;
+									|  <!-- Sichtbarer Dokumentinhalt im body -->
+									|  <p class="crazy important">
+									|      Sehen Sie sich den Quellcode dieser Seite an.
+									|    <bold>(Kontextmenu: Seitenquelltext anzeigen)</bold>
+									|  </p>
+									|  <script src="ressources/js/playWithDOMElements.js"></script>
+									|&#x3C;/body&#x3E;
+									|</html>
+
+
+						p.fragment
+							small.fragment Als erstes kommt per inline-js die eben geloggte Begrüssung.
+								br
+								span.fragment Und im HEAD wird Modernizr eingebunden, danach wissen wir eine Menge über den Browser der hier benutzt wird.. 
+								br
+								span.fragment Und ganz am Ende des BODY laden wir noch ein Skript was irgendwelche verrückten Dinge mit dem Inhalt der (dann hoffentlich vollständig geladenen) Seite tun könnte.
+								.fragment (In der Console dieses Browsers sind übrigens gerade ein paar Dinge geschehen..)
+
+				section
+					h3 Vorschau: Frameworks für HTML5 und CSS 
+					p.fragment 
+						i Es gibt dutzende gute (und noch mehr weniger gute) Frameworks, die eine Basis für die Webentwicklung mit HTML, CSS und Javascript mitbringen und das Arbeiten damit leichter machen. 
+					p.fragment 
+						i Es ist zwar sehr unfair - aber wir erwähnen hier jetzt nur eins, weil es das derzeit am weitesten verbreitete ist: Bootstrap
+					p.fragment In a nutshell: "Bootstrap ist das beliebteste Framework mit HTML, CSS und JS für die Entwicklung von anpassungsfähigen Projekten für das moderne Web."
+					mark.fragment also: getbootstrap.com
+
+				section
+					div
+						h2 Challenge:
+						h4 
+							blockquote "Wir bauen eine Web-App, die die Profile der Wahlkreis-Kandidaten zur Berliner Abgeordnetenhauswahl auflistet und anzeigt."
+						ul.fragment 
+							li.checked (Fundamente) Web-Technologien (check)
+							
+							li.checked (Struktur) HTML (check)
+							
+							li.unchecked (Styling) CSS (gleich)
+							
+							li.unchecked (Entwicklung) Web-Apps (später) 
+						p.fragment
+							mark Aufgaben:
+							br
+							.tasks
+								.fragment STEP1: Seite mit Grundstruktur HTML und Bootstrap anlegen.
+								.fragment STEP2: Darin eine (möglichst sinnvolle) 
+									br
+									|Inhaltstruktur mit HTML-Elementen aufbauen.  
+
+
+				section
+					h3 Challenge - STEP1
+					h6 Basis einrichten und Bootstrap einabauen.
+					p.fragment 
+						i Projektordner anlegen, z.B.  
+						| c:\dev\challenge
+					p.fragment
+						i Bootstrap herunterladen, auspacken und dort unter 
+						| c:\dev\challenge\libs\bootstrap 
+						i hineinkopieren.
+					p.fragment
+						i Im Projektordner eine Seite 
+						| (challenge.html)
+						i mit Grundstruktur HTML und Bootstrap anlegen.
+						br 
+					p.fragment 
+						i Diese von 
+							a(href="http://getbootstrap.com/getting-started/#template" target="_blank") Bootstrap 
+							i oder aus dem Ordner snippets/step1-bs-basic-template.html übernehmen. 
+
+				section
+					h3 Challenge - STEP2 
+					h6 Musterhafte Inhaltsstruktur im BODY. 
+					p.fragment 
+						i In der Datei 
+						| c:\dev\challenge.html
+					p.fragment
+						i eine Struktur ähnlich wie in diesem Snippet aufbauen: 
+						br
+						| snippets\step2-content-structure.html
+						br
+						i (Das Snippet kann gegen den BODY der bisherigen Datei ausgetauscht werden)
+					p.fragment 
+						i Die Datei "challenge.html" enthält jetzt ordentlich strukturiertes Markup anhand von zwei Beispielen mit Daten aus der API von 
+						a(target="_blank" href="https://www.abgeordnetenwatch.de/api") abgeordnetenwatch.de 
+						br
+						small (Vielen Dank für die gute Arbeit und sogar eine API!)
+			
+
+
+
+
+
+				section
+					h3 CSS - cascading style sheets?
+					p.fragment = styling des Erscheinungsbildes und Verhaltens von HTML-Elementen
+					p.fragment 
+						i cascading??? 
+							br
+							mark.fragment Kaskadierend??
+							br
+						.fragment Styles werden an alle auf die gewählten Selektoren "passenden" Elemente (in der Reihenfolge Ihrer Spezifität) zugewiesen.
+					p.fragment 
+						i 
+							mark Selektoren? 
+							br
+						.fragment ..werden benutzt um Elemente in eine Formatierung einzubeziehen. Selektoren können miteinander kombiniert werden.  
+					p.fragment 
+						i  
+							mark Spezifität?
+							br
+						.fragment ..bedeutet, daß unterschiedliche Selektoren unterschiedlich stark gewichtet werden (können).  
+
+				section
+					h3 CSS - Selektoren 
+					p.fragment Klasse
+						br 
+						mark.fragment .hintergrund 
+						br
+						.fragment ..erfasst Elemente die das Attribut class="hintergrund" haben. 
+					p.fragment Elemente  
+						br
+						mark.fragment p 
+						br
+						.fragment erfasst alle Absätze 
+					p.fragment ID's 
+						br
+						mark.fragment #logo 
+						br
+						.fragment erfasst das Element, dessen Attribut ID="logo" gesetzt hat.
+
+				section
+					h3 CSS - Kombination von Selektoren 
+					p.fragment 
+						mark.fragment section.important
+						br
+						.fragment Erfasst alle Elemente vom Typ "section" die die Klasse "important" gesetzt haben 
+					p.fragment 
+						mark.fragment #logo.important
+						br
+						.fragment Erfasst das Element mit der ID "logo", wenn es die Klasse "important" gesetzt hat. 
+					p.fragment 
+						mark.fragment section#logo.important
+						br
+						.fragment Erfasst das Element mir der ID "logo", wenn es vom Typ "section" ist und die Klasse "important" gesetzt hat. 
+
+				section
+					h3 CSS - Kombination von Selektoren 
+					p.fragment 
+						mark.fragment .really.important
+						br
+						.fragment Erfasst Elemente die die Klassen "important" und "really" gesetzt haben (AND) 
+					p.fragment 
+						mark.fragment .important, .notice
+						br
+						.fragment Erfasst Elemente die die Klassen "important" oder "notice" gesetzt haben (OR). 
+					p.fragment 
+						mark.fragment .dialog .important
+						br
+						.fragment Erfasst Elemente die die Klasse "important" gesetzt haben und ein übergeordnetes Element besitzen, welches die Klasse "dialog" hat. 
+
+
+				section
+					h3 CSS - Weitere Selektoren 
+					p.fragment Pseudo-Klassen 
+						br
+						mark.fragment :hover
+						br
+						.fragment Bsp: img:hover erfasst z.B. ein Element, wenn die Maus darüber bewegt wird. 
+					p.fragment Pseudo-Elemente 
+						br
+						mark.fragment ::before
+						br
+						.fragment Bsp: img#logo::before ERZEUGT ein Element vor dem Bild mit der ID="logo" und weist diesem die angebenen Attribute zu. 
+					p.fragment und so einiges mehr:
+						br
+						mark.fragment Kindselektor: e > f
+						mark.fragment Nachbarselektor: e + f
+						mark.fragment :first-child
+						mark.fragment :nth-of-type()
+						mark.fragment :not()
+						br
+						.fragment und und und..
+
+				section
+					h3 CSS - Beispiel 
+					p.fragment Ein Stück CSS zum Verhalten des Nav aus Bootstrap
+					.fragment
+						pre(style="width:80%;")
+							code.hljs()
+								|.navbar-default .navbar-nav>.active>a,
+								|.navbar-default .navbar-nav>.active>a:focus, 
+								|.navbar-default .navbar-nav>.active>a:hover {
+								|  color: #555;
+								|  background-color: #e7e7e7;
+								|}
+					.fragment
+						pre(style="width:80%;")
+							code.hljs()
+								|...
+								|<ul class="nav navbar-nav">
+								|   <li class="active">
+								|     <a href="#">Link A</a>
+								|   </li>
+								|   <li><a href="#">Link B</a></li>
+								|</ul>
+								|...
+
+
+
+
+				section
+					h3 CSS - Responsive design
+					p.fragment 
+						i 
+							br 
+							mark "mobile first" 
+							br
+							.fragment  > Design beginnt bei der "kleinsten" Geräteklasse 
+
+					mark.fragment Konsequenzen: 
+					p.fragment Fokus aufs Wesentliche
+					p.fragment Gut durchdenken!
+					p.fragment Fluides Layout
+					p.fragment Media queries - bottom up
+					p.fragment Für Touch-Bedienung umsetzen
+					p.fragment Reduktion > Nutzungsweise berücksichtigen
+
+
+
+
+				section
+					h3 CSS - Media queries
+					p.fragment 
+						i 
+							br 
+							mark @media ("Merkmale und Kriterien") {"angewendete Styles"} 
+							br
+						.fragment Bei Vorliegen bestimmter Kriterien sollen die angegebenen Styles zur Anwendung kommen. 
+					p.fragment 
+						i Ein Beispiel:
+							br
+							mark @media (min-width: 768px) {p:{color:red}} 
+							br
+						.fragment ..bewirkt, daß sich ab einer Bildschirmgröße von 768px die Farbe der Absätze ändert.
+					p.fragment Merkmale können auch mit logischen Operatoren verbunden werden:  
+						br
+						mark @media (min-width: 768px) and (max-width: 1280px) {p:{color:red}} 
+						br
+						i Ab einer Breite von 1281px soll wieder die "normale" Farbe angewendet werden.
+
+				section
+					h3 Bootstrap - Grid-System
+					p.fragment 
+						i Es gibt (für feste und variable Breiten)
+							br 
+							mark .container 
+							br
+							| als Behälter für Zeilen 
+					p.fragment 
+						i  
+							mark .row 
+							br
+							| als Zeilen, um horizontale Gruppen zu bilden 
+					p.fragment 
+						i  
+							mark .col-xy-z 
+							br
+							| um Spalten innerhalb von Zeilen zu bilden 
+
+
+				section
+					h3 Bootstrap - Grid-System
+					p.fragment 
+						i Es gibt normalerweise ein Grid mit:
+							br 
+							mark 12 Spalten
+
+					p.fragment 
+						i und normalerweise die vier Geräteklassen:
+
+					p.fragment 
+						i  "extra small devices"
+						br
+						mark xs
+						i   (viewport bis 768px) 
+
+					p.fragment 
+						i  "small devices"
+						br
+						mark sm
+						i   (viewport ab 768px) 
+
+					p.fragment 
+						i  "medium devices"
+						br
+						mark md
+						i   (viewport ab 992px) 
+
+					p.fragment 
+						i  "large devices"
+						br
+						mark lg
+						i   (viewport ab 1200px) 
+
+
+
+				section
+					h3 Bootstrap - Grid-System
+					p.fragment 
+						i Also z.B.: 
+							br
+							mark .col-md-3 
+							br
+							| für eine Spalte mit 3/12 Breite des Containers 
+					p.fragment 
+						i für die Geräteklassen ab (>992px)
+							br
+							mark md 
+							br
+					p.fragment 
+						i Oder: 
+							br
+							mark .col-xs-6 
+							br
+							| für eine Spalte mit 6/12 Breite des Containers 
+							br
+							| für ALLE Geräteklasse (weil für xs und darüber)
+
+
+				section
+					div
+						h2 Challenge:
+						h4 
+							blockquote "Wir bauen eine Web-App, die die Profile der Wahlkreis-Kandidaten zur Berliner Abgeordnetenhauswahl auflistet und anzeigt."
+						ul.fragment 
+							li.checked (Fundamente) Web-Technologien (check)
+							
+							li.checked (Struktur) HTML (check)
+							
+							li.unchecked (Styling) CSS (working)
+							
+							li.unchecked (Entwicklung) Web-Apps (später) 
+						p.fragment
+							mark Aufgaben:
+							br
+							.tasks
+								.fragment STEP3: Seite für Bootstrap erweitern und Bootstrap-Klassen zuweisen.
+								.fragment STEP4: Etwas eigene Semantik ist sinnvoll: item, photo, person, hintergrund 
+
+
+				section
+					h3 Challenge - STEP3
+					h6 Bootstrap Menu vervollständigen
+					p.fragment 
+						i In der Datei 
+						| c:\dev\challenge.html
+					p.fragment
+						i fehlen noch ein paar Details für ein responsives Menu mit Dropdown.
+						br
+						| snippets\step3-dropdown-menu-item.html
+						br
+						i passt gut hinter das letzte LI in HEADER > NAV > UL 
+					p.fragment
+						i und für ein responsives Ausklapp-Menu brauchen wir noch
+						br
+						| snippets\step3-responsive-menu.html
+						br
+						i das gehört direkt in HEADER > NAV vor das DIV mit dem collapse
+					p.fragment
+						i Das Ergebnis der Operation sollte in etwa so aussehen:
+						br
+						| snippets\step3-result.html
+						
+				section
+					h3 Challenge STEP3
+					h6 ..und Bootstrap Container-Klassen als Basis einmengen.
+					p.fragment Wir strukturieren den Header so, daß er über die komplette Breite läuft (container-fluid).
+					p.fragment Und der Platz dort zu 4/12 vom Titel und zu 8/12 vom Menu ausgefüllt wird.
+					p.fragment Dann geben wir MAIN noch einen container (fixer Breite) und geben den SECTIONs je eine row.
+					p.fragment Beim H1 Titel müssen wir noch eine col-md-12 vergeben, damit die korrekte Breite des Inhalts von Bootstrap gesetzt werden kann.
+					p.fragment Jedem ARTICLE geben wir eine 50% Spaltenbreite (col-md-6).
+					p.fragment Und strukturieren den Inhalt jeweils mit zwei Zeilen (row), in denen wir je eine Aufteilung 3/12 und 9/12 vornehmen.
+					p.fragment Dies bei der ersten und der zweiten row gleichermaßen.
+
+				section
+					h3 Challenge - STEP4
+					h6 Dann mit eigener Semantik nach Bedarf würzen. 
+					p.fragment 
+						i Für die spätere Gestaltung per CSS wird es hilfreich sein, bestimmten Elementen noch einige Klassen zu geben, z.B.: 
+						br
+						| item, photo, person, hintergrund 
+						br
+						br
+					p.fragment
+						mark item
+						i  bei ARTICLE 
+					p.fragment
+						mark photo
+						i  beim DIV um das IMG herum 
+					p.fragment
+						mark person
+						i  beim DIV um den Namen, Beruf und Gerburtsjahr
+					p.fragment
+						mark hintergrund
+						i  beim DIV um die Ausbildung 
+						
+
+					p.fragment
+						i Das Ergebnis der Operationen sollte in etwa so aussehen:
+						br
+						| snippets\step4-result.html
+
+
+				section
+					h3 CSS - Box-Modell
+					p.fragment Das Box-Modell bestimmt wie Bereiche vom Browser angezeigt und wie dabei Höhen und Breiten berechnet werden.
+					.row
+						.col(style="float:left;width:50%;")
+							.fragment
+								img(src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Boxmodell-detail.png")
+								p
+									small Bildquelle: 
+										a(href="https://en.wikipedia.org/wiki/CSS_box_model" target="_blank") Wikipedia
+						.col(style="float:left;width:50%;")
+							p.fragment
+								i Die Berechnung berücksichtigt: 
+								br
+								br
+								mark.fragment Inhaltsbereich
+								br
+								br
+								mark.fragment Innenabstand (padding)
+								br
+								br
+								mark.fragment Rahmen (border)
+								br
+								br
+								mark.fragment Außenabstand (margin)
+								br
+								br
+								.fragment Interaktive Demo -  
+									a(href="http://codepen.io/carolineartz/full/ogVXZj" target="blank") hier!
+
+				section
+					h3 CSS - Zeilenlauf und Positionierung
+					p.fragment position:
+						mark static
+						br
+						i.fragment ..die Standardeinstellung, belässt Elemente im Zeilenlauf 
+					p.fragment position:
+						mark absolute
+						br
+						i.fragment ..Elemente wird vom Zeilenlauf losgelöst im nächsthöheren (mit z.B. position:relative definierten) Element erzeugt und kann mit diversen Angaben positioniert und in seiner Größe definiert werden. 
+					p.fragment position:
+						mark fixed
+						br
+						i.fragment ..Element wird absolut positioniert, aber alle Angaben zur Ausrichtung beziehen sich auf den Viewport des Browsers. Nützlich für feststehende Elemente in Seiten.
+					p.fragment position:
+						mark relative
+						br
+						i.fragment ..Element soll als Bezugspunkt für weitere (meist absolute) Positionierungen dienen, es kann aber auch selbst im Zeilenlauf positioniert werden.
+
+				section
+					h3 CSS - Zeilenfluss der Elemente
+					p.fragment float:
+						mark none
+						br
+						i.fragment ..die Standardeinstellung, Element wird nicht verschoben 
+					p.fragment float:
+						mark left / right
+						br
+						i.fragment ..Element wird an die linke oder rechte Kante des (nächst höheren) Elternelements verschoben.
+
+					p.fragment float:
+						mark inherit
+						br
+						i.fragment ..Element erbt die float-Eigenschaft des Elternelements
+
+					p.fragment clear:
+						mark none / left / right / both / inherit
+						br
+						i.fragment ..wird verwendet um zu verhindern, daß ein Element von floatenden anderen Elementen verdeckt werden kann.
+
+					p.fragment Anmerkung:
+						mark floats..
+						br
+						i.fragment dienen 
+							mark nicht
+							|  dazu, den Textfluss z.B. in einem Absatz zu steuern. Dafür verwendet man 
+							mark text-align
+
+
+
+				section
+					h3 CSS - FlexBox
+					p.fragment Endlich da, aber noch selten genutzt.
+						p.fragment Ermöglicht den Fluss von Elementen, über eine saubere Spezifikation zu steuern. 
+						p.fragment 
+							i ..was normalerweise mit einem Durcheinander von 
+								br
+								| positions, floats und clears erreicht(..) wird.
+						p.fragment Mit FlexBox sind 
+							mark komplexe Layouts
+							|  möglich, die dazu noch 
+							mark verstehbar
+							|  sind und 
+							mark wartbar
+							|  bleiben(..)
+						p.fragment Selbst die 
+							mark Reihenfolge
+							|  von Elementen kann damit (auch geräteklassenabhängig) gesteuert werden.
+							p.fragment 
+								mark Bootstrap 4
+								|  und 
+								mark ionic
+								|  (und andere Frameworks) bieten FlexBox-Support
+								br
+								.fragment A visual playground -  
+									a(href="https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/" target="blank") click here!
+
+				section
+					h3 CSS - (Wichtige) Einheiten
+					p.fragment 
+						mark px
+						br
+						i.fragment Bezieht sich auf (einen vom Browser normalisierten) Referenz-Pixel mit 96dpi 
+							i.fragment (und muss daher nicht zwingend mit einem Pixel des Gerätes identisch sein..) 
+					p.fragment Prozent:
+						mark %
+						br
+						i.fragment Bezieht sich auf einen Anteil an der Breite oder Höhe eines Elternelements.
+
+					p.fragment 
+						mark em
+						br
+						i.fragment Relative Größenangabe in Bezug auf die darüberliegende Defintion eines Elternelements.  
+
+					p.fragment root-em
+						mark rem
+						br
+						i.fragment Relative Größenangabe in Bezug auf das Root-Element.
+
+						p.fragment viewport-abhängig
+							mark vw / vh
+							br
+							i.fragment Bezogen auf den Viewport (Breite oder Höhe) in %
+
+
+
+				section
+					div
+						h2 Challenge:
+						h4 
+							blockquote "Wir bauen eine Web-App, die die Profile der Wahlkreis-Kandidaten zur Berliner Abgeordnetenhauswahl auflistet und anzeigt."
+						ul.fragment 
+							li.checked (Fundamente) Web-Technologien (check)
+							
+							li.checked (Struktur) HTML (check)
+							
+							li.checked (Styling) CSS (check)
+							
+							li.unchecked (Entwicklung) Web-Apps (bald) 
+
+				section
+					div
+						h2 Challenge:
+						p.fragment
+							mark Aufgaben:
+							br
+							.tasks
+								.fragment STEP5: Eine separate(!) css-Datei für unsere Bootstrap-Modifikationen (in einem Unterordner) einbinden.
+								.fragment STEP6: Hintergrundfarben für Main-Inhalt und Header und andere Schrift für Titel und ein nettes Hintergrundbild
+								.fragment STEP7: Fonts aussuchen, einbetten und den h1-tags zuweisen
+								.fragment STEP8: Die Container der articles und der Bereiche darin etwas abgrenzen, z.B. mit Hintergrundfarben, oder border, oder shadow.  
+								.fragment STEP9: Bild korrigieren und um die Bilder ein padding als Abstand und eine Linie als Abgrenzung.
+								.fragment STEP10: Name bündig mit Bildoberkante setzen und die Absätze bei Person etwas größer und etwas padding für person und Hintergrund und zwei verschiedene Hintergrundfarben setzen...
+
+				section
+					h3 Challenge - STEP5
+					h6 Basis für CSS-Theming schaffen.
+					.fragment 
+						p
+							i In der Datei 
+							| c:\dev\challenge.html
+							br
+							i im HEAD eine weitere CSS-Datei aufnehmen, in der wir alle Modifikationen am Style unterbringen:
+							br
+							pre 
+								code <link href="css/challenge-theme.css" rel="stylesheet">
+					p.fragment Und im BODY gleich noch eine Klasse "challenge" aufnehmen, die wir später zum Überschreiben von Styles verwenden könnten. 
+						br
+						i
+							small (Hilfreich, wenn die Selektoren zu einem Style nicht spezifisch genug sind. Dann kann man sie damit spezifischer machen. Wir wollen ja keineswegs im bootstrap.css direkt Änderungen einbauen...)
+					p.fragment
+						i Das Ergebnis sollte so aussehen wie hier:
+						br
+						| snippets\step3-result.html
+						br
+						i ..sowie eine (noch) leere Datei unter 
+						| challenge\css\challenge-theme.css
+
+						
+				section
+					h3 Challenge - STEP6 bis 10
+					h6 Endlich mal CSS-Styles ausprobieren.
+					p.fragment Nun ist es an der Zeit einfach mal zu schauen, 
+						br
+						| was man mit Styling so alles anstellen kann.
+					p.fragment
+						i Das Ergebnis könnte so (oder erheblich schöner) aussehen wie hier:
+						br
+						| snippets\step6bis10-result-challenge-theme.css
+
+
+
+
+				section
+					h2 Dynamische Web-Apps
+					p
+						i Grundlagen:
+					ul
+						li.fragment Javascript, Typescript
+						li.fragment Tooling: Generatoren, Präprozessoren, Build-Tools, Versionskontrolle, CI
+						li.fragment Editoren, IDE's
+						li.fragment JQuery, Bootstrap
+						li.fragment Ajax, Async, XHR, REST/JSON, CORS
+						li.fragment SPA's mit Angular 2 (und 1) 
+						li.fragment ...
+					p.fragment(style="background-color:red") GET more:///input brain ::ERR_NO_PERM_GEN_SPACE
+					p
+						mark.fragment => Zu viel für einen Tag!
+						br
+						.fragment Daher heute: Einfach mal in 7 Schritten ausprobieren...
+
+				section
+					div
+						h2 Challenge:
+						h4 
+							blockquote "Wir bauen eine Web-App, die die Profile der Wahlkreis-Kandidaten zur Berliner Abgeordnetenhauswahl auflistet und anzeigt."
+						ul.fragment 
+							li.checked (Fundamente) Web-Technologien (check)
+							
+							li.checked (Struktur) HTML (check)
+							
+							li.checked (Styling) CSS (check)
+							
+							li.unchecked (Entwicklung) Web-Apps (work) 
+
+				section
+					div
+						h2 Challenge:
+						p.fragment
+							mark Aufgaben:
+							br
+							.tasks
+								.fragment STEP11: ng2 quickstarter..
+								.fragment STEP12: Ordner und HTML-Datein integrieren..
+								.fragment STEP13: Daten per http in ng2 app bereitstellen..
+								.fragment STEP14: imports und Module für die Nutzung von http (!) in ng2 konfigurieren..
+								.fragment STEP15: Nun (endlich) ein Template für die Anzeige der Profile..
+								.fragment STEP16: Zugriff klappt nicht - CORS? WTF?! Dann eben lokal
+								.fragment STEP17: Weiter mit dem Template:
+								.fragment ...DONE
+
+
+
+				section
+					h3 Challenge - STEP11
+					h6 ng2 quickstarter installieren.
+					p.fragment 
+						i Wir setzen mal voraus, daß 
+							a(target="_blank" href="https://git-scm.com/") git
+						|  und 
+						a(target="_blank" href="https://nodejs.org/en/") node
+						|  lokal installiert sind.
+						small Ansonsten wäre es jetzt der Zeitpunkt, das nachzuholen.
+						br
+
+					p.fragment 
+						i Erstmal gehen wir auf der Shell/Eingabeauforderung/CMD
+						br
+						| in den Ordner dev (cd c:\dev)
+						br
+						
+					.fragment
+						p
+							i Dort legen wir los:
+							br
+							pre 
+								code git clone https://github.com/angular/quickstart challenge-ng
+									| cd challenge-ng
+									| npm install
+									| npm start
+									| (bei Bedarf npm run typings -- install)
+					.fragment
+						p	Es passieren nun *magische* Dinge 
+							small und ein auf CDNs und Repositories weltweit verteilter Baum von Abhängigkeiten wird geladen und installiert...
+					.fragment
+						p Einfach warten und hoffen - 
+							mark.fragment Meistens klappt das!
+						
+				section
+					h3 Challenge - STEP12
+					h6 Unsere vorhin selbst gebauten statischen Seitenvorlagen integrieren. 
+					p.fragment Als erstes die Ordner libs und css in den Ordner challenge-ng kopieren.
+
+					.fragment
+						p Dann aus unserer challenge.html in die neue index.html einfügen:
+							pre 
+								code <title>Abgeordnetenhauswahl Berlin - Liste der Kandidaten</title>
+									| <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+									| <link href="css/challenge-theme.css" rel="stylesheet">
+					.fragment
+						p Dafür dies rauslöschen:
+							pre 
+								code <link rel="stylesheet" href="styles.css">
+
+					.fragment
+						p	Aus unserer challenge.html Seite den Inhalt aus BODY kopieren und in der index.html im BODY einfügen.
+					.fragment
+						p	Und dann dies anstelle der beiden ARTICLE Elemente einfügen:
+							pre 
+								code <my-app>Loading...</my-app>
+	
+	
+	
+				section
+					h3 Challenge - STEP13
+					h6 Datenzugriff bereitstellen.
+					small (Keine SPA ohne API) 
+					.fragment
+						p Die Daten gibt es unter dieser Url 
+							pre 
+								code https://www.abgeordnetenwatch.de/api/parliament/berlin/candidates.json
+							i bei: 
+								a(href="https://www.abgeordnetenwatch.de/api/parliament/berlin/candidates.json" target="_blank") Abgeordnetenwatch 
+					.fragment
+						p Dann in app.component.js AppComponent{} erweitern um:
+							pre 
+								code candidates={};
+									| 
+									| constructor(private http: Http) {
+									|  http.get('https://www.abgeordnetenwatch.de/api/parliament/berlin/candidates.json')
+									|    .map(res => res.json())
+									|    .subscribe(data => this.candidates = data,
+									|    err => console.log(err),
+									|    () => console.log('Completed', this.candidates));
+									|}
+
+				section
+					h3 Challenge - STEP14
+					h6 http (etc) in der App verfügbar machen.
+					small (jede Menge imports..) 
+					.fragment
+						p In der app.component.js:
+							pre 
+								code import {Http} from '@angular/http';
+									| import 'rxjs/add/operator/map';
+									| import { HttpModule } from '@angular/http';
+
+					.fragment
+						p und in app.module.ts ngmodule konfigurieren:
+							pre 
+								code imports: [BrowserModule, HttpModule],
+									| providers: [],
+									| declarations: [AppComponent],
+									| bootstrap: [AppComponent]
+				
+				section
+					h3 Challenge - STEP15
+					h6 Anzeigetemplate umbauen.
+					small (Und endlich echte Daten anzeigen!) 
+					.fragment
+						p In app/app.component.ts statt 
+							br
+							| "template: 'My First Angular 2 App" einfügen:
+							pre 
+								code templateUrl: 'app/challenge.component.html',			
+					.fragment
+						p und in der (neu anzulegenden) Datei app/challenge.component.html
+							br 
+							| einen der beiden article-tags mit seinem Inhalt als Vorlage einfügen.
+					.fragment
+						p und darunter (damit wir sehen ob die Daten geholt werden):
+							pre 
+								code <pre>{{candidates.profiles | json}}</pre>
+	
+				section
+					h3 Challenge - STEP16
+					h6 "NOT WORK" - WTF is CORS?
+					small (..ist ein browserbasierter Sicherheitsmechnismus) 
+					.fragment
+						p
+							small Irgendwie kommen da keine Daten an. 
+								br
+								| In den Developer-Tools in der Console sehen wir:
+							pre 
+								code XMLHttpRequest cannot load https://www.abgeordnetenwatch.de/api/parliament/berlin/candidates.json. 
+									| No 'Access-Control-Allow-Origin' header is present on the requested resource. 
+									| Origin 'http://localhost:3000' is therefore not allowed access.
+					.fragment
+						p Für eine Einführung in CORS fehlt jetzt die Zeit, 
+								br
+								| aber 
+								a(target="_blank" href="http://restlet.com/blog/2015/12/15/understanding-and-using-cors/") hier
+								|  gibt es detaillierte Infos. 
+					.fragment
+						p
+							small Zusammenfassend: Der Server, der "cross-site" angefragt wird, liefert eine Information zurück, welche Domains ihn fragen dürfen und der Browser entscheidet anhand dessen und anhand der Herkunfts-Domäne, ob dieser Request erlaubt ist.
+							br
+							small In unserem Fall erlaubt dies Abgeordnetenwatch leider (noch) nicht, aber vielleicht macht man sich auch Sorgen um Überlastung, da Requests dort manchmal 30 Sekunden dauern können...
+							br
+							.fragment
+								small Schade - aber wir können ja die Datei auch einfach mal im Browser von der Url direkt runterladen und dann 
+									br
+									| lokal ablegen unter "app/candidates.json"
+						.fragment
+							p
+								small Dann müssen wir aber den Request in app.component.js noch ändern auf:
+								pre
+									code http.get('app/candidates.json')
+								small (Nun werden die json-Daten direkt lokal von unserem Testserver ausgeliefert.)
+											
+												
+												
+				section
+					h3 Challenge - STEP17
+					h6 Dann endlich weiter mit den Templates.
+					small (..finally the fun part) 
+					.fragment
+						small Eine For-Schleife beim ARTICLE:
+						pre 
+							code.html <article *ngFor="let profile of candidates.profiles; let i = index">...</article>
+					.fragment
+						small 
+							br
+							| Den h3 mit dem Name ändern in:
+						pre 
+							code <h3>{{profile.personal.first_name}} {{profile.personal.last_name}}</h3>
+					.fragment
+						small 
+							br
+							| Und das Bild:
+						pre 
+							code <img src="{{profile.personal.picture.url}}"/>
+												
+					.fragment
+						small 
+							br
+							| Und natürlich die Partei:
+						pre 
+							code <h2>{{profile.party}}</h2>
+
+					.fragment
+						small 
+							br
+							| Und so weiter:
+						pre 
+							code {{profile.attribute.subobject.subsubetc}}
+						small "profile" ist unser lokales Objekt aus der For-Schleife, wir können auf alle seine Eigenschaften zugreifen. 
+							br
+							| Was es da alles so gibt, können wir unten in der Seite im PRE-Block sehen.
+												
+
+				section
+					div(style=' position:absolute;  margin-left:8rem; text-align: left; padding-bottom:3rem;')
+						img.brand(src='datawerk/brand/dw-logo-2013_x31.png')
+					div(style='  position:absolute;right:0; top:0; margin-right:8rem; text-align: right; padding-bottom:3rem;')
+						p
+							small
+								a(href="mailto:kontakt@datawerk.de") Jan Jordan
+								br
+								a(href="mailto:kontakt@datawerk.de") Florin Peter
+					div(style=' margin-top:6rem ')
+						h2 HTML 5 / CSS 3
+						h3 Challenge 
+						h4 Sprint 1, Tag 1
+						p.fragment
+							mark done
+						img.borderless(style="width:30%;background-color:green" src='https://pixabay.com/static/uploads/photo/2013/07/12/17/40/orienteering-152206_960_720.png')
+
+
+
+
+		script(src='reveal.js/lib/js/head.min.js')
+		script(src='reveal.js/js/reveal.js')
+		script.
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+			{
+			src: 'reveal.js/lib/js/classList.js',
+			condition: function() {
+			return !document.body.classList;
+			}
+			}, {
+			src: 'reveal.js/plugin/markdown/marked.js',
+			condition: function() {
+			return !!document.querySelector('[data-markdown]');
+			}
+			}, {
+			src: 'reveal.js/plugin/markdown/markdown.js',
+			condition: function() {
+			return !!document.querySelector('[data-markdown]');
+			}
+			}, {
+			src: 'reveal.js/plugin/highlight/highlight.js',
+			async: true,
+			callback: function() {
+			hljs.initHighlightingOnLoad();
+			}
+			}, {
+			src: 'reveal.js/plugin/zoom-js/zoom.js',
+			async: true
+			}, {
+			src: 'reveal.js/plugin/notes/notes.js',
+			async: true
+			}
+			]
+			});
+		

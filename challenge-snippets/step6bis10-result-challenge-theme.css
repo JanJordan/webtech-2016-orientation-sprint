@@ -1,0 +1,78 @@
+/* STEP7: Fonts aussuchen, einbetten und den h1-tags zuweisen */
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:800';
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* STEP6: Hintergrundfarben für Main-Inhalt und Header
+          und andere Schrift für Titel
+          und ein nettes Hintergrundbild */
+
+main.container {
+    background-color: #eee;
+}
+header {
+    background-color: #fff;
+}
+header #logo {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+}
+header {
+    background-image: url("skyline-296469_960_720.png");
+    background-position-y: -100px;
+    min-height: 175px;
+}
+
+/* STEP8: Die Container der articles und der Bereiche darin etwas abgrenzen,
+          z.B. mit Hintergrundfarben,
+          oder border,
+          oder shadow. */
+
+article {
+    padding: 1rem;
+    box-shadow: 2px 2px #999;
+}
+article> div {
+    padding: 1rem;
+    background-color: #fff;
+}
+article section.row:first-of-type {
+    border-bottom: solid 1px #999;
+}
+article section.row:last-of-type {
+    margin-top: 1rem;
+}
+
+/* STEP9: Bild korrigieren
+          und um die Bilder ein padding als Abstand und eine Linie als Abgrenzung. */
+
+.item .photo img {
+    max-width: 100%;
+    border: 1px solid #aaa;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+/* STEP10: Name bündig mit Bildoberkante setzen
+            und die Absätze bei Person etwas größer
+            und etwas padding für person und hintergrund
+            und zwei verschiedene Hintergrundfarben setzen... */
+
+.person h3 {
+    margin-top: 0;
+}
+.person p {
+    font-size: 20px;
+    ;
+}
+.person, .hintergrund {
+    padding: 1rem;
+}
+.person {
+    background-color: #5ff;
+}
+.hintergrund {
+    background-color: #f5f;
+}
