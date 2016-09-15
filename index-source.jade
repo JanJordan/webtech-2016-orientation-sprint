@@ -658,7 +658,7 @@ html(lang='de')
 					p.fragment 
 						i Diese von 
 							a(href="http://getbootstrap.com/getting-started/#template" target="_blank") Bootstrap 
-							i oder aus dem Ordner snippets/step1-bs-basic-template.html übernehmen. 
+							i oder aus dem Ordner challenge-snippets/step1-bs-basic-template.html übernehmen. 
 
 				section
 					h3 Challenge - STEP2 
@@ -669,9 +669,9 @@ html(lang='de')
 					p.fragment
 						i eine Struktur ähnlich wie in diesem Snippet aufbauen: 
 						br
-						| snippets\step2-content-structure.html
+						| challenge-snippets\step2-content-structure.html
 						br
-						i (Das Snippet kann gegen den BODY der bisherigen Datei ausgetauscht werden)
+						i (Das Snippet kann den BODY der bisherigen Datei ersetzen)
 					p.fragment 
 						i Die Datei "challenge.html" enthält jetzt ordentlich strukturiertes Markup anhand von zwei Beispielen mit Daten aus der API von 
 						a(target="_blank" href="https://www.abgeordnetenwatch.de/api") abgeordnetenwatch.de 
@@ -950,19 +950,19 @@ html(lang='de')
 					p.fragment
 						i fehlen noch ein paar Details für ein responsives Menu mit Dropdown.
 						br
-						| snippets\step3-dropdown-menu-item.html
+						| challenge-snippets\step3-dropdown-menu-item.html
 						br
 						i passt gut hinter das letzte LI in HEADER > NAV > UL 
 					p.fragment
 						i und für ein responsives Ausklapp-Menu brauchen wir noch
 						br
-						| snippets\step3-responsive-menu.html
+						| challenge-snippets\step3-responsive-menu.html
 						br
 						i das gehört direkt in HEADER > NAV vor das DIV mit dem collapse
 					p.fragment
 						i Das Ergebnis der Operation sollte in etwa so aussehen:
 						br
-						| snippets\step3-result.html
+						| challenge-snippets\step3-result.html
 						
 				section
 					h3 Challenge STEP3
@@ -1001,7 +1001,7 @@ html(lang='de')
 					p.fragment
 						i Das Ergebnis der Operationen sollte in etwa so aussehen:
 						br
-						| snippets\step4-result.html
+						| challenge-snippets\step4-result.html
 
 
 				section
@@ -1187,7 +1187,7 @@ html(lang='de')
 					p.fragment
 						i Das Ergebnis sollte so aussehen wie hier:
 						br
-						| snippets\step3-result.html
+						| challenge-snippets\step5-result.html
 						br
 						i ..sowie eine (noch) leere Datei unter 
 						| challenge\css\challenge-theme.css
@@ -1202,7 +1202,7 @@ html(lang='de')
 					p.fragment
 						i Das Ergebnis könnte so (oder erheblich schöner) aussehen wie hier:
 						br
-						| snippets\step6bis10-result-challenge-theme.css
+						| challenge-snippets\step6bis10-result-challenge-theme.css
 
 
 
@@ -1309,7 +1309,7 @@ html(lang='de')
 								code <link rel="stylesheet" href="styles.css">
 
 					.fragment
-						p	Aus unserer challenge.html Seite den Inhalt aus BODY kopieren und in der index.html im BODY einfügen.
+						p	Aus unserer challenge.html Seite den BODY kopieren und den in der index.html ersetzen.
 					.fragment
 						p	Und dann dies anstelle der beiden ARTICLE Elemente einfügen:
 							pre 
@@ -1328,7 +1328,7 @@ html(lang='de')
 							i bei: 
 								a(href="https://www.abgeordnetenwatch.de/api/parliament/berlin/candidates.json" target="_blank") Abgeordnetenwatch 
 					.fragment
-						p Dann in app.component.js AppComponent{} erweitern um:
+						p Dann in app\app.component.ts AppComponent{} erweitern um:
 							pre 
 								code candidates={};
 									| 
@@ -1345,14 +1345,17 @@ html(lang='de')
 					h6 http (etc) in der App verfügbar machen.
 					small (jede Menge imports..) 
 					.fragment
-						p In der app.component.js:
+						p In der app\app.component.ts ganz open einfügen:
 							pre 
 								code import {Http} from '@angular/http';
 									| import 'rxjs/add/operator/map';
 									| import { HttpModule } from '@angular/http';
 
 					.fragment
-						p und in app.module.ts ngmodule konfigurieren:
+                                                p Ebenfalls oben importiere:
+                                                        pre
+                                                                code import { HttpModule } from '@angular/http';
+						p und in app\app.module.ts @NgModule anpassen:
 							pre 
 								code imports: [BrowserModule, HttpModule],
 									| providers: [],
@@ -1372,7 +1375,7 @@ html(lang='de')
 					.fragment
 						p und in der (neu anzulegenden) Datei app/challenge.component.html
 							br 
-							| einen der beiden article-tags mit seinem Inhalt als Vorlage einfügen.
+							| einen der beiden article-tags aus challenge.html mit seinem Inhalt als Vorlage einfügen.
 					.fragment
 						p und darunter (damit wir sehen ob die Daten geholt werden):
 							pre 
@@ -1409,7 +1412,7 @@ html(lang='de')
 									| lokal ablegen unter "app/candidates.json"
 						.fragment
 							p
-								small Dann müssen wir aber den Request in app.component.js noch ändern auf:
+								small Dann müssen wir aber den Request in app\app.component.js noch ändern auf:
 								pre
 									code http.get('app/candidates.json')
 								small (Nun werden die json-Daten direkt lokal von unserem Testserver ausgeliefert.)
