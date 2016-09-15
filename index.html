@@ -204,6 +204,7 @@
             <p>Es war einmal vor gar nicht so langer Zeit...</p>
           </div>
           <div class="fragment"><img style="background-color:white" width="25%" src="https://c2.staticflickr.com/4/3271/2818154005_7cc2cc90ef.jpg"><br><small>Bildquelle: <a href="https://www.flickr.com/photos/bradybd/2818154005" target="_blank">Flickr</a></small></div>
+          <!-- Too many different browsers now or then? -->
           <p class="fragment"> <i>Jeder Hersteller wollte etwas besonders gut können. Jede Version konnte etwas neues. Die Nutzer hatten verschiedene Browser in verschiedenen Versionen auf verschiedenen Systemen... </i></p>
           <p class="fragment">Anzahl Browser x Anzahl genutzte Versionen<br><small class="fragment">x Geräteklassen (Smartphones, Tablets, Autos...) </small><br>
             <div class="fragment">Ergebnis: Auf jeden Fall zuviel, vielzuviel!</div>
@@ -234,6 +235,7 @@
             </div>
             <div class="fragment">
               <mark>Und: Wissen ist Macht</mark>
+              <!-- relevanz? -->
               <p><a target="_blank" href="http://caniuse.com/#search=flexbox">caniuse flexbox?</a></p>
             </div>
           </p>
@@ -244,8 +246,9 @@
             <h4> 
               <blockquote>"Wir bauen eine Web-App, die die Profile der Wahlkreis-Kandidaten zur Berliner Abgeordnetenhauswahl auflistet und anzeigt."</blockquote>
             </h4>
-            <ul class="fragment"> 
-              <li class="checked">(Fundamente) Web-Technologien (check)</li>
+            <ul class="fragment">
+              <!-- idee -->
+              <li class="checked">(Fundamente) Web-Technologien &#10004;</li>
               <li class="unchecked">(Struktur) HTML (gleich)</li>
               <li class="unchecked">(Styling) CSS (später)</li>
               <li class="unchecked">(Entwicklung) Web-Apps (später) </li>
@@ -397,7 +400,7 @@
  </p>
 &#x3C;/body&#x3E;
 </html></code></pre></i>
-            <p class="fragment"><small class="fragment">Eine Datei mit Styleinformationen ist nun mit der Seite verbunden. </small><br><small class="fragment">Der Browser verwendet diese, um die Oberfläche der Seite zu modifizieren.</small><br><small class="fragment">Wenn wir in der Datei "stylesheet.css" ein ".important: {color:red}" hinzufügen, wird der Absatz in rot angezeigt.</small></p>
+<p class="fragment"><small class="fragment">Eine Datei mit Style-Informationen ist nun mit der Seite verbunden. </small><br><small class="fragment">Der Browser verwendet diese, um die Oberfläche der Seite zu modifizieren.</small><br><small class="fragment">Wenn wir in der Datei "stylesheet.css" ein ".important: {color:red;}" hinzufügen, wird der Absatz in rot angezeigt.</small></p>
           </p>
         </section>
         <section>
@@ -434,7 +437,7 @@
           <p class="fragment"> <i>Es gibt dutzende gute (und noch mehr weniger gute) Frameworks, die eine Basis für die Webentwicklung mit HTML, CSS und Javascript mitbringen und das Arbeiten damit leichter machen. </i></p>
           <p class="fragment"> <i>Es ist zwar sehr unfair - aber wir erwähnen hier jetzt nur eins, weil es das derzeit am weitesten verbreitete ist: Bootstrap</i></p>
           <p class="fragment">In a nutshell: "Bootstrap ist das beliebteste Framework mit HTML, CSS und JS für die Entwicklung von anpassungsfähigen Projekten für das moderne Web."</p>
-          <mark class="fragment">also: getbootstrap.com</mark>
+          <mark class="fragment">also: <a href="https://getbootstrap.com" target="_blank">getbootstrap.com</a></mark>
         </section>
         <section>
           <div>
@@ -461,7 +464,7 @@
           <h3>Challenge - STEP1</h3>
           <h6>Basis einrichten und Bootstrap einabauen.</h6>
           <p class="fragment"> <i>Projektordner anlegen, z.B.  </i>c:\dev\challenge</p>
-          <p class="fragment"><i>Bootstrap herunterladen, auspacken und dort unter </i>c:\dev\challenge\libs\bootstrap <i>hineinkopieren.</i></p>
+          <p class="fragment"><i>Bootstrap <a href="http://getbootstrap.com/getting-started/#download" target="_blank">herunterladen</a>, auspacken und dort unter </i>c:\dev\challenge\libs\bootstrap <i>hineinkopieren.</i></p>
           <p class="fragment"><i>Im Projektordner eine Seite </i>(challenge.html)<i>mit Grundstruktur HTML und Bootstrap anlegen.</i><br></p>
           <p class="fragment"> <i>Diese von <a href="http://getbootstrap.com/getting-started/#template" target="_blank">Bootstrap </a><i>oder aus dem Ordner snippets/step1-bs-basic-template.html übernehmen. </i></i></p>
         </section>
@@ -476,15 +479,15 @@
           <h3>CSS - cascading style sheets?</h3>
           <p class="fragment">= styling des Erscheinungsbildes und Verhaltens von HTML-Elementen</p>
           <p class="fragment"> <i>cascading??? <br>
-              <mark class="fragment">Kaskadierend??</mark><br></i>
+            <mark class="fragment">Kaskadierend??</mark><br></i>
             <div class="fragment">Styles werden an alle auf die gewählten Selektoren "passenden" Elemente (in der Reihenfolge Ihrer Spezifität) zugewiesen.</div>
           </p>
           <p class="fragment"> <i> 
-              <mark>Selektoren? </mark><br></i>
+            <mark>Selektoren? </mark><br></i>
             <div class="fragment">..werden benutzt um Elemente in eine Formatierung einzubeziehen. Selektoren können miteinander kombiniert werden.  </div>
           </p>
           <p class="fragment"> <i> 
-              <mark>Spezifität?</mark><br></i>
+            <mark>Spezifität?</mark><br></i>
             <div class="fragment">..bedeutet, daß unterschiedliche Selektoren unterschiedlich stark gewichtet werden (können).  </div>
           </p>
         </section>
@@ -565,20 +568,20 @@
           </div>
           <div class="fragment">
             <pre style="width:80%;"><code class="hljs">...
-<ul class="nav navbar-nav">
-  <li class="active">
-    <a href="#">Link A</a>
-  </li>
-  <li><a href="#">Link B</a></li>
-</ul>
+              <ul class="nav navbar-nav">
+                <li class="active">
+                  <a href="#">Link A</a>
+                </li>
+                <li><a href="#">Link B</a></li>
+              </ul>
 ...</code></pre>
           </div>
         </section>
         <section>
           <h3>CSS - Responsive design</h3>
           <p class="fragment"> <i> <br>
-              <mark>"mobile first" </mark><br>
-              <div class="fragment"> > Design beginnt bei der "kleinsten" Geräteklasse </div></i></p>
+            <mark>"mobile first" </mark><br>
+            <div class="fragment"> > Design beginnt bei der "kleinsten" Geräteklasse </div></i></p>
           <mark class="fragment">Konsequenzen: </mark>
           <p class="fragment">Fokus aufs Wesentliche</p>
           <p class="fragment">Gut durchdenken!</p>
@@ -590,11 +593,11 @@
         <section>
           <h3>CSS - Media queries</h3>
           <p class="fragment"> <i> <br>
-              <mark>@media ("Merkmale und Kriterien") {"angewendete Styles"} </mark><br></i>
+            <mark>@media ("Merkmale und Kriterien") {"angewendete Styles"} </mark><br></i>
             <div class="fragment">Bei Vorliegen bestimmter Kriterien sollen die angegebenen Styles zur Anwendung kommen. </div>
           </p>
           <p class="fragment"> <i>Ein Beispiel:<br>
-              <mark>@media (min-width: 768px) {p:{color:red}} </mark><br></i>
+            <mark>@media (min-width: 768px) {p:{color:red}} </mark><br></i>
             <div class="fragment">..bewirkt, daß sich ab einer Bildschirmgröße von 768px die Farbe der Absätze ändert.</div>
           </p>
           <p class="fragment">Merkmale können auch mit logischen Operatoren verbunden werden:  <br>
@@ -604,16 +607,16 @@
         <section>
           <h3>Bootstrap - Grid-System</h3>
           <p class="fragment"> <i>Es gibt (für feste und variable Breiten)<br>
-              <mark>.container </mark><br>als Behälter für Zeilen </i></p>
+            <mark>.container </mark><br>als Behälter für Zeilen </i></p>
           <p class="fragment"> <i> 
-              <mark>.row </mark><br>als Zeilen, um horizontale Gruppen zu bilden </i></p>
+            <mark>.row </mark><br>als Zeilen, um horizontale Gruppen zu bilden </i></p>
           <p class="fragment"> <i> 
-              <mark>.col-xy-z </mark><br>um Spalten innerhalb von Zeilen zu bilden </i></p>
+            <mark>.col-xy-z </mark><br>um Spalten innerhalb von Zeilen zu bilden </i></p>
         </section>
         <section>
           <h3>Bootstrap - Grid-System</h3>
           <p class="fragment"> <i>Es gibt normalerweise ein Grid mit:<br>
-              <mark>12 Spalten</mark></i></p>
+            <mark>12 Spalten</mark></i></p>
           <p class="fragment"> <i>und normalerweise die vier Geräteklassen:</i></p>
           <p class="fragment"> <i> "extra small devices"</i><br>
             <mark>xs</mark><i>  (viewport bis 768px) </i>
@@ -631,11 +634,11 @@
         <section>
           <h3>Bootstrap - Grid-System</h3>
           <p class="fragment"> <i>Also z.B.: <br>
-              <mark>.col-md-3 </mark><br>für eine Spalte mit 3/12 Breite des Containers </i></p>
+            <mark>.col-md-3 </mark><br>für eine Spalte mit 3/12 Breite des Containers </i></p>
           <p class="fragment"> <i>für die Geräteklassen ab (>992px)<br>
-              <mark>md </mark><br></i></p>
+            <mark>md </mark><br></i></p>
           <p class="fragment"> <i>Oder: <br>
-              <mark>.col-xs-6 </mark><br>für eine Spalte mit 6/12 Breite des Containers <br>für ALLE Geräteklasse (weil für xs und darüber)</i></p>
+            <mark>.col-xs-6 </mark><br>für eine Spalte mit 6/12 Breite des Containers <br>für ALLE Geräteklasse (weil für xs und darüber)</i></p>
         </section>
         <section>
           <div>
@@ -653,6 +656,7 @@
               <mark>Aufgaben:</mark><br>
               <div class="tasks">
                 <div class="fragment">STEP3: Seite für Bootstrap erweitern und Bootstrap-Klassen zuweisen.</div>
+                <!-- ?? -->
                 <div class="fragment">STEP4: Etwas eigene Semantik ist sinnvoll: item, photo, person, hintergrund </div>
               </div>
             </p>
@@ -663,6 +667,7 @@
           <h6>Bootstrap Menu vervollständigen</h6>
           <p class="fragment"> <i>In der Datei </i>c:\dev\challenge.html</p>
           <p class="fragment"><i>fehlen noch ein paar Details für ein responsives Menu mit Dropdown.</i><br>snippets\step3-dropdown-menu-item.html<br><i>passt gut hinter das letzte LI in HEADER > NAV > UL </i></p>
+          <!-- collapse not in step2 snippet -->
           <p class="fragment"><i>und für ein responsives Ausklapp-Menu brauchen wir noch</i><br>snippets\step3-responsive-menu.html<br><i>das gehört direkt in HEADER > NAV vor das DIV mit dem collapse</i></p>
           <p class="fragment"><i>Das Ergebnis der Operation sollte in etwa so aussehen:</i><br>snippets\step3-result.html</p>
         </section>
@@ -813,7 +818,8 @@
                 <div class="fragment">STEP7: Fonts aussuchen, einbetten und den h1-tags zuweisen</div>
                 <div class="fragment">STEP8: Die Container der articles und der Bereiche darin etwas abgrenzen, z.B. mit Hintergrundfarben, oder border, oder shadow.  </div>
                 <div class="fragment">STEP9: Bild korrigieren und um die Bilder ein padding als Abstand und eine Linie als Abgrenzung.</div>
-                <div class="fragment">STEP10: Name bündig mit Bildoberkante setzen und die Absätze bei Person etwas größer und etwas padding für person und Hintergrund und zwei verschiedene Hintergrundfarben setzen...</div>
+                <div class="fragment">STEP10: Name bündig mit Bildoberkante und die Absätze bei Person etwas größer setzen. Etwas padding für Person und Hintergrund sowie zwei verschiedene Hintergrundfarben setzen.
+                </div>
               </div>
             </p>
           </div>
@@ -1019,6 +1025,7 @@ Origin 'http://localhost:3000' is therefore not allowed access.</code></pre>
           <h3>Challenge - STEP17</h3>
           <h6>Dann endlich weiter mit den Templates.</h6><small>(..finally the fun part) </small>
           <div class="fragment"><small>Eine For-Schleife beim ARTICLE:</small>
+            <!-- *ngFor is case senstivice but is transformed into lowercase - was not able to find a fix -->
             <pre> <code class="html"><article *ngFor="let profile of candidates.profiles; let i = index">...</article></code></pre>
           </div>
           <div class="fragment"><small> <br>Den h3 mit dem Name ändern in:</small>

@@ -151,7 +151,7 @@ html(lang='de')
 						p 
 							mark Cookies 
 							br
-							|(Informationsfragmente im Browser die automatisch zum Server mitgeschickt werden)
+							|(Informationsfragmente im Browser, die automatisch zum Server mitgeschickt werden)
 						img(width="25%" src="https://c2.staticflickr.com/6/5287/5333879388_1f7f37dc79_z.jpg")
 						p
 							small Bildquelle: 
@@ -214,7 +214,7 @@ html(lang='de')
 							|  (Knoten) im DOM:
 					p.fragment Dokument, Dokumentfragment, Element, Attribut, Text
 					p.fragment 
-						i Diese stehen untereinandern in 
+						i Diese stehen untereinander in 
 							mark Beziehungen:
 					p.fragment root > parent > children
 					p.fragment 
@@ -232,7 +232,7 @@ html(lang='de')
 					p.fragment 1: Die 
 						mark Darstellung im Browser
 						|  basiert darauf 
-					p.fragment 2: Die Struktur der Elementbaums ist gleichzeitig das Fundament für die Modifikation des Erscheinungsbildes per 
+					p.fragment 2: Die Struktur des Elementbaums ist gleichzeitig das Fundament für die Modifikation des Erscheinungsbildes per 
 						mark CSS 
 					p.fragment 3: Neue (und alte) Javascript-Bibliotheken und Frameworks arbeiten massiv auf Basis der 
 						mark Manipulation des DOMs
@@ -366,7 +366,7 @@ html(lang='de')
 									|&#x3C;body&#x3E;
 									|  <!-- Sichtbarer Dokumentinhalt im body -->
 									|  <p>Sehen Sie sich den Quellcode dieser Seite an.
-									|    <bold>(Kontextmenu: Seitenquelltext anzeigen)</bold>
+									|    <b>(Kontextmenu: Seitenquelltext anzeigen)</b>
 									|  </p>
 									|&#x3C;/body&#x3E;
 									|</html>
@@ -393,7 +393,7 @@ html(lang='de')
 							small Manche Elemente haben keinen Inhalt, z.B. 
 							pre.fragment(style="width:80%;")
 								code.hljs()
-									|<br>, <img>, <hr>, <input>
+									|<br/>, <img/>, <hr/>, <input/>
 					p.fragment
 						i
 							small Elemente sollten generell immer geschlossen werden, auch die leeren Elemente. 
@@ -423,7 +423,7 @@ html(lang='de')
 									|&#x3C;body style="background-color:blue" &#x3E;
 									|  <!-- Sichtbarer Dokumentinhalt im body -->
 									|  <p class="important">Sehen Sie sich den Quellcode dieser Seite an.
-									|    <bold>(Kontextmenu: Seitenquelltext anzeigen)</bold>
+									|    <b>(Kontextmenu: Seitenquelltext anzeigen)</b>
 									|  </p>
 									|&#x3C;/body&#x3E;
 									|</html>
@@ -445,7 +445,7 @@ html(lang='de')
 				section
 					h3 HTML - Element-Typen 
 					p.fragment 
-						i Elemente haben unterschiedliche Grundeinstellungen in Bezug auf Ihre Anzeige und den Zeilenlauf
+						i Elemente haben unterschiedliche Grundeinstellungen in Bezug auf ihre Anzeige und den Zeilenlauf
 					p.fragment 
 						mark Block-level Elemente 
 						br
@@ -466,7 +466,7 @@ html(lang='de')
 					p.fragment 
 						mark div
 						p.fragment 
-							i ..wird sehr of benutzt, um Blöcke von Inhalten zu bilden,
+							i ..wird sehr oft benutzt, um Blöcke von Inhalten zu bilden,
 								br
 								| die dann per CSS gestaltet werden. 
 							br
@@ -522,7 +522,7 @@ html(lang='de')
 					p.fragment 
 						span ..über 30 neue Elemente und diverse Attribute kamen mit HTML5 dazu
 						p.fragment 
-							i Hier eine Auswahl der Elemente die speziell für die Strukturierung von Inhalten gedacht sind:
+							i Hier eine Auswahl der Elemente, die speziell für die Strukturierung von Inhalten gedacht sind:
 						p
 							mark.fragment header
 							mark.fragment nav
@@ -554,10 +554,10 @@ html(lang='de')
 									|  </style>
 									|  <link rel="stylesheet" href="stylesheet.css">
 									|&#x3C;/head&#x3E;
-									|&#x3C;body style="background-color:blue" &#x3E;
+									|&#x3C;body style="background-color:blue;" &#x3E;
 									|  <!-- Sichtbarer Dokumentinhalt im body -->
 									|  <p class="important">Sehen Sie sich den Quellcode dieser Seite an.
-									|    <bold>(Kontextmenu: Seitenquelltext anzeigen)</bold>
+									|    <b>(Kontextmenu: Seitenquelltext anzeigen)</b>
 									|  </p>
 									|&#x3C;/body&#x3E;
 									|</html>
@@ -593,7 +593,7 @@ html(lang='de')
 									|  <!-- Sichtbarer Dokumentinhalt im body -->
 									|  <p class="crazy important">
 									|      Sehen Sie sich den Quellcode dieser Seite an.
-									|    <bold>(Kontextmenu: Seitenquelltext anzeigen)</bold>
+									|    <b>(Kontextmenu: Seitenquelltext anzeigen)</b>
 									|  </p>
 									|  <script src="ressources/js/playWithDOMElements.js"></script>
 									|&#x3C;/body&#x3E;
@@ -603,9 +603,9 @@ html(lang='de')
 						p.fragment
 							small.fragment Als erstes kommt per inline-js die eben geloggte Begrüssung.
 								br
-								span.fragment Und im HEAD wird Modernizr eingebunden, danach wissen wir eine Menge über den Browser der hier benutzt wird.. 
+								span.fragment Und im HEAD wird Modernizr eingebunden, danach wissen wir eine Menge über den Browser, der hier benutzt wird.. 
 								br
-								span.fragment Und ganz am Ende des BODY laden wir noch ein Skript was irgendwelche verrückten Dinge mit dem Inhalt der (dann hoffentlich vollständig geladenen) Seite tun könnte.
+								span.fragment Und ganz am Ende des BODY laden wir noch ein Skript, was irgendwelche verrückten Dinge mit dem Inhalt der (dann hoffentlich vollständig geladenen) Seite tun könnte.
 								.fragment (In der Console dieses Browsers sind übrigens gerade ein paar Dinge geschehen..)
 
 				section
@@ -642,7 +642,7 @@ html(lang='de')
 
 				section
 					h3 Challenge - STEP1
-					h6 Basis einrichten und Bootstrap einabauen.
+					h6 Basis einrichten und Bootstrap einbauen.
 					p.fragment 
 						i Projektordner anlegen, z.B.  
 						| c:\dev\challenge
@@ -658,7 +658,7 @@ html(lang='de')
 					p.fragment 
 						i Diese von 
 							a(href="http://getbootstrap.com/getting-started/#template" target="_blank") Bootstrap 
-							i oder aus dem Ordner snippets/step1-bs-basic-template.html übernehmen. 
+							i oder aus dem Ordner challenge-snippets/step1-bs-basic-template.html übernehmen. 
 
 				section
 					h3 Challenge - STEP2 
@@ -669,9 +669,9 @@ html(lang='de')
 					p.fragment
 						i eine Struktur ähnlich wie in diesem Snippet aufbauen: 
 						br
-						| snippets\step2-content-structure.html
+						| challenge-snippets\step2-content-structure.html
 						br
-						i (Das Snippet kann gegen den BODY der bisherigen Datei ausgetauscht werden)
+						i (Das Snippet kann den BODY der bisherigen Datei ersetzen)
 					p.fragment 
 						i Die Datei "challenge.html" enthält jetzt ordentlich strukturiertes Markup anhand von zwei Beispielen mit Daten aus der API von 
 						a(target="_blank" href="https://www.abgeordnetenwatch.de/api") abgeordnetenwatch.de 
@@ -710,12 +710,12 @@ html(lang='de')
 						mark.fragment .hintergrund 
 						br
 						.fragment ..erfasst Elemente die das Attribut class="hintergrund" haben. 
-					p.fragment Elemente  
+					p.fragment Element  
 						br
 						mark.fragment p 
 						br
 						.fragment erfasst alle Absätze 
-					p.fragment ID's 
+					p.fragment ID 
 						br
 						mark.fragment #logo 
 						br
@@ -726,7 +726,7 @@ html(lang='de')
 					p.fragment 
 						mark.fragment section.important
 						br
-						.fragment Erfasst alle Elemente vom Typ "section" die die Klasse "important" gesetzt haben 
+						.fragment Erfasst alle Elemente vom Typ "section", die die Klasse "important" gesetzt haben 
 					p.fragment 
 						mark.fragment #logo.important
 						br
@@ -741,15 +741,15 @@ html(lang='de')
 					p.fragment 
 						mark.fragment .really.important
 						br
-						.fragment Erfasst Elemente die die Klassen "important" und "really" gesetzt haben (AND) 
+						.fragment Erfasst Elemente, die die Klassen "important" und "really" gesetzt haben (AND) 
 					p.fragment 
 						mark.fragment .important, .notice
 						br
-						.fragment Erfasst Elemente die die Klassen "important" oder "notice" gesetzt haben (OR). 
+						.fragment Erfasst Elemente, die die Klassen "important" oder "notice" gesetzt haben (OR). 
 					p.fragment 
 						mark.fragment .dialog .important
 						br
-						.fragment Erfasst Elemente die die Klasse "important" gesetzt haben und ein übergeordnetes Element besitzen, welches die Klasse "dialog" hat. 
+						.fragment Erfasst Elemente, die die Klasse "important" gesetzt haben und ein übergeordnetes Element besitzen, welches die Klasse "dialog" hat. 
 
 
 				section
@@ -950,19 +950,19 @@ html(lang='de')
 					p.fragment
 						i fehlen noch ein paar Details für ein responsives Menu mit Dropdown.
 						br
-						| snippets\step3-dropdown-menu-item.html
+						| challenge-snippets\step3-dropdown-menu-item.html
 						br
 						i passt gut hinter das letzte LI in HEADER > NAV > UL 
 					p.fragment
 						i und für ein responsives Ausklapp-Menu brauchen wir noch
 						br
-						| snippets\step3-responsive-menu.html
+						| challenge-snippets\step3-responsive-menu.html
 						br
 						i das gehört direkt in HEADER > NAV vor das DIV mit dem collapse
 					p.fragment
 						i Das Ergebnis der Operation sollte in etwa so aussehen:
 						br
-						| snippets\step3-result.html
+						| challenge-snippets\step3-result.html
 						
 				section
 					h3 Challenge STEP3
@@ -1001,7 +1001,7 @@ html(lang='de')
 					p.fragment
 						i Das Ergebnis der Operationen sollte in etwa so aussehen:
 						br
-						| snippets\step4-result.html
+						| challenge-snippets\step4-result.html
 
 
 				section
@@ -1043,7 +1043,7 @@ html(lang='de')
 					p.fragment position:
 						mark absolute
 						br
-						i.fragment ..Elemente wird vom Zeilenlauf losgelöst im nächsthöheren (mit z.B. position:relative definierten) Element erzeugt und kann mit diversen Angaben positioniert und in seiner Größe definiert werden. 
+						i.fragment ..Element wird vom Zeilenlauf losgelöst im nächsthöheren (mit z.B. position:relative definierten) Element erzeugt und kann mit diversen Angaben positioniert und in seiner Größe definiert werden. 
 					p.fragment position:
 						mark fixed
 						br
@@ -1062,7 +1062,7 @@ html(lang='de')
 					p.fragment float:
 						mark left / right
 						br
-						i.fragment ..Element wird an die linke oder rechte Kante des (nächst höheren) Elternelements verschoben.
+						i.fragment ..Element wird an die linke oder rechte Kante des (nächsthöheren) Elternelements verschoben.
 
 					p.fragment float:
 						mark inherit
@@ -1072,7 +1072,7 @@ html(lang='de')
 					p.fragment clear:
 						mark none / left / right / both / inherit
 						br
-						i.fragment ..wird verwendet um zu verhindern, daß ein Element von floatenden anderen Elementen verdeckt werden kann.
+						i.fragment ..wird verwendet, um zu verhindern, daß ein Element von floatenden anderen Elementen verdeckt werden kann.
 
 					p.fragment Anmerkung:
 						mark floats..
@@ -1087,7 +1087,7 @@ html(lang='de')
 				section
 					h3 CSS - FlexBox
 					p.fragment Endlich da, aber noch selten genutzt.
-						p.fragment Ermöglicht den Fluss von Elementen, über eine saubere Spezifikation zu steuern. 
+						p.fragment Ermöglicht den Fluss von Elementen über eine saubere Spezifikation zu steuern. 
 						p.fragment 
 							i ..was normalerweise mit einem Durcheinander von 
 								br
@@ -1162,7 +1162,7 @@ html(lang='de')
 							br
 							.tasks
 								.fragment STEP5: Eine separate(!) css-Datei für unsere Bootstrap-Modifikationen (in einem Unterordner) einbinden.
-								.fragment STEP6: Hintergrundfarben für Main-Inhalt und Header und andere Schrift für Titel und ein nettes Hintergrundbild
+								.fragment STEP6: Hintergrundfarben für Main-Inhalt und Header; und andere Schrift für Titel sowie ein nettes Hintergrundbild
 								.fragment STEP7: Fonts aussuchen, einbetten und den h1-tags zuweisen
 								.fragment STEP8: Die Container der articles und der Bereiche darin etwas abgrenzen, z.B. mit Hintergrundfarben, oder border, oder shadow.  
 								.fragment STEP9: Bild korrigieren und um die Bilder ein padding als Abstand und eine Linie als Abgrenzung.
@@ -1187,7 +1187,7 @@ html(lang='de')
 					p.fragment
 						i Das Ergebnis sollte so aussehen wie hier:
 						br
-						| snippets\step3-result.html
+						| challenge-snippets\step5-result.html
 						br
 						i ..sowie eine (noch) leere Datei unter 
 						| challenge\css\challenge-theme.css
@@ -1202,7 +1202,7 @@ html(lang='de')
 					p.fragment
 						i Das Ergebnis könnte so (oder erheblich schöner) aussehen wie hier:
 						br
-						| snippets\step6bis10-result-challenge-theme.css
+						| challenge-snippets\step6bis10-result-challenge-theme.css
 
 
 
@@ -1247,7 +1247,7 @@ html(lang='de')
 							br
 							.tasks
 								.fragment STEP11: ng2 quickstarter..
-								.fragment STEP12: Ordner und HTML-Datein integrieren..
+								.fragment STEP12: Ordner und HTML-Dateien integrieren..
 								.fragment STEP13: Daten per http in ng2 app bereitstellen..
 								.fragment STEP14: imports und Module für die Nutzung von http (!) in ng2 konfigurieren..
 								.fragment STEP15: Nun (endlich) ein Template für die Anzeige der Profile..
@@ -1309,7 +1309,7 @@ html(lang='de')
 								code <link rel="stylesheet" href="styles.css">
 
 					.fragment
-						p	Aus unserer challenge.html Seite den Inhalt aus BODY kopieren und in der index.html im BODY einfügen.
+						p	Aus unserer challenge.html Seite den BODY kopieren und den in der index.html ersetzen.
 					.fragment
 						p	Und dann dies anstelle der beiden ARTICLE Elemente einfügen:
 							pre 
@@ -1328,7 +1328,7 @@ html(lang='de')
 							i bei: 
 								a(href="https://www.abgeordnetenwatch.de/api/parliament/berlin/candidates.json" target="_blank") Abgeordnetenwatch 
 					.fragment
-						p Dann in app.component.js AppComponent{} erweitern um:
+						p Dann in app\app.component.ts AppComponent{} erweitern um:
 							pre 
 								code candidates={};
 									| 
@@ -1345,14 +1345,17 @@ html(lang='de')
 					h6 http (etc) in der App verfügbar machen.
 					small (jede Menge imports..) 
 					.fragment
-						p In der app.component.js:
+						p In der app\app.component.ts ganz open einfügen:
 							pre 
 								code import {Http} from '@angular/http';
 									| import 'rxjs/add/operator/map';
 									| import { HttpModule } from '@angular/http';
 
 					.fragment
-						p und in app.module.ts ngmodule konfigurieren:
+                                                p Ebenfalls oben importiere:
+                                                        pre
+                                                                code import { HttpModule } from '@angular/http';
+						p und in app\app.module.ts @NgModule anpassen:
 							pre 
 								code imports: [BrowserModule, HttpModule],
 									| providers: [],
@@ -1372,7 +1375,7 @@ html(lang='de')
 					.fragment
 						p und in der (neu anzulegenden) Datei app/challenge.component.html
 							br 
-							| einen der beiden article-tags mit seinem Inhalt als Vorlage einfügen.
+							| einen der beiden article-tags aus challenge.html mit seinem Inhalt als Vorlage einfügen.
 					.fragment
 						p und darunter (damit wir sehen ob die Daten geholt werden):
 							pre 
@@ -1399,7 +1402,7 @@ html(lang='de')
 								|  gibt es detaillierte Infos. 
 					.fragment
 						p
-							small Zusammenfassend: Der Server, der "cross-site" angefragt wird, liefert eine Information zurück, welche Domains ihn fragen dürfen und der Browser entscheidet anhand dessen und anhand der Herkunfts-Domäne, ob dieser Request erlaubt ist.
+							small Zusammenfassend: Der Server, der "cross-site" angefragt wird, liefert eine Information zurück, welche Domains ihn fragen dürfen. Der Browser entscheidet anhand dessen und anhand der Herkunfts-Domäne, ob dieser Request erlaubt ist.
 							br
 							small In unserem Fall erlaubt dies Abgeordnetenwatch leider (noch) nicht, aber vielleicht macht man sich auch Sorgen um Überlastung, da Requests dort manchmal 30 Sekunden dauern können...
 							br
@@ -1409,7 +1412,7 @@ html(lang='de')
 									| lokal ablegen unter "app/candidates.json"
 						.fragment
 							p
-								small Dann müssen wir aber den Request in app.component.js noch ändern auf:
+								small Dann müssen wir aber den Request in app\app.component.js noch ändern auf:
 								pre
 									code http.get('app/candidates.json')
 								small (Nun werden die json-Daten direkt lokal von unserem Testserver ausgeliefert.)
