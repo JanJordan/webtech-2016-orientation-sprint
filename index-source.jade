@@ -637,7 +637,7 @@ html(lang='de')
 								.fragment STEP1: Seite mit Grundstruktur HTML und Bootstrap anlegen.
 								.fragment STEP2: Darin eine (möglichst sinnvolle) 
 									br
-									|Inhaltstruktur mit HTML-Elementen aufbauen.  
+									|Inhaltstruktur mit HTML-Elementen für MAIN HEADER aufbauen.  
 
 
 				section
@@ -672,6 +672,12 @@ html(lang='de')
 						| challenge-snippets\step2-content-structure.html
 						br
 						i (Das Snippet kann den BODY der bisherigen Datei ersetzen)
+					p.fragment
+						i Und eine Basis für ein späteres Bootstrap-Menu:
+						br
+						| challenge-snippets\step2-bs-header.html
+						br
+						i (Das Snippet kann direkt nach dem öffnenden BODY integriert werden)
 					p.fragment 
 						i Die Datei "challenge.html" enthält jetzt ordentlich strukturiertes Markup anhand von zwei Beispielen mit Daten aus der API von 
 						a(target="_blank" href="https://www.abgeordnetenwatch.de/api") abgeordnetenwatch.de 
@@ -943,7 +949,7 @@ html(lang='de')
 
 				section
 					h3 Challenge - STEP3
-					h6 Bootstrap Menu vervollständigen
+					h6 Noch eine Prise Bootstrap Menu hinzufügen
 					p.fragment 
 						i In der Datei 
 						| c:\dev\challenge.html
@@ -959,22 +965,34 @@ html(lang='de')
 						| challenge-snippets\step3-responsive-menu.html
 						br
 						i das gehört direkt in HEADER > NAV vor das DIV mit dem collapse
+				
+						
+				section
+					h3 Challenge STEP3
+					h6 ..und weitere Bootstrap Container-Klassen als Basis einrühren.
+					p.fragment 
+						small Wir strukturieren den Header so, daß er über die komplette Breite läuft (container-fluid).
+					p.fragment 
+						small Und der Platz dort zu 4/12 vom Titel und zu 8/12 vom Menu ausgefüllt wird.
+					p.fragment 
+						small Dann geben wir MAIN noch einen container (fixer Breite) und geben den SECTIONs je eine row.
+					p.fragment 
+						small Beim H1 Titel müssen wir noch eine col-md-12 vergeben, 
+							br
+							| damit die korrekte Breite des Inhalts von Bootstrap gesetzt werden kann.
+					p.fragment 
+						small Jedem ARTICLE geben wir eine 50% Spaltenbreite (col-md-6).
+					p.fragment 
+						small Und strukturieren den Inhalt jeweils mit zwei Zeilen (row), 
+							br
+							| in denen wir je eine Aufteilung 3/12 und 9/12 vornehmen.
+					p.fragment 
+						small Dies bei der ersten und der zweiten row gleichermaßen.
 					p.fragment
 						i Das Ergebnis der Operation sollte in etwa so aussehen:
 						br
 						| challenge-snippets\step3-result.html
 						
-				section
-					h3 Challenge STEP3
-					h6 ..und Bootstrap Container-Klassen als Basis einmengen.
-					p.fragment Wir strukturieren den Header so, daß er über die komplette Breite läuft (container-fluid).
-					p.fragment Und der Platz dort zu 4/12 vom Titel und zu 8/12 vom Menu ausgefüllt wird.
-					p.fragment Dann geben wir MAIN noch einen container (fixer Breite) und geben den SECTIONs je eine row.
-					p.fragment Beim H1 Titel müssen wir noch eine col-md-12 vergeben, damit die korrekte Breite des Inhalts von Bootstrap gesetzt werden kann.
-					p.fragment Jedem ARTICLE geben wir eine 50% Spaltenbreite (col-md-6).
-					p.fragment Und strukturieren den Inhalt jeweils mit zwei Zeilen (row), in denen wir je eine Aufteilung 3/12 und 9/12 vornehmen.
-					p.fragment Dies bei der ersten und der zweiten row gleichermaßen.
-
 				section
 					h3 Challenge - STEP4
 					h6 Dann mit eigener Semantik nach Bedarf würzen. 
@@ -996,8 +1014,6 @@ html(lang='de')
 					p.fragment
 						mark hintergrund
 						i  beim DIV um die Ausbildung 
-						
-
 					p.fragment
 						i Das Ergebnis der Operationen sollte in etwa so aussehen:
 						br
@@ -1352,9 +1368,9 @@ html(lang='de')
 									| import { HttpModule } from '@angular/http';
 
 					.fragment
-                                                p Ebenfalls oben importiere:
-                                                        pre
-                                                                code import { HttpModule } from '@angular/http';
+												p Ebenfalls oben importiere:
+														pre
+																code import { HttpModule } from '@angular/http';
 						p und in app\app.module.ts @NgModule anpassen:
 							pre 
 								code imports: [BrowserModule, HttpModule],

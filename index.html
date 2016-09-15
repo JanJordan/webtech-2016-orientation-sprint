@@ -125,7 +125,7 @@
           </p>
           <div class="fragment"> 
             <p> 
-              <mark>Cookies </mark><br>(Informationsfragmente im Browser die automatisch zum Server mitgeschickt werden)
+              <mark>Cookies </mark><br>(Informationsfragmente im Browser, die automatisch zum Server mitgeschickt werden)
             </p><img width="25%" src="https://c2.staticflickr.com/6/5287/5333879388_1f7f37dc79_z.jpg">
             <p><small>Bildquelle: <a href="https://www.flickr.com/photos/shellewill79/5333879388" target="_blank">Flickr</a></small></p>
           </div>
@@ -172,7 +172,7 @@
           <p class="fragment"> <i>Es gibt unterschiedliche 
               <mark>Typen von Nodes </mark> (Knoten) im DOM:</i></p>
           <p class="fragment">Dokument, Dokumentfragment, Element, Attribut, Text</p>
-          <p class="fragment"> <i>Diese stehen untereinandern in 
+          <p class="fragment"> <i>Diese stehen untereinander in 
               <mark>Beziehungen:</mark></i></p>
           <p class="fragment">root > parent > children</p>
           <p class="fragment"> <i>Eine Besonderheit: </i><br>Attribute sind 
@@ -185,7 +185,7 @@
           <p class="fragment">1: Die 
             <mark>Darstellung im Browser</mark> basiert darauf 
           </p>
-          <p class="fragment">2: Die Struktur der Elementbaums ist gleichzeitig das Fundament für die Modifikation des Erscheinungsbildes per 
+          <p class="fragment">2: Die Struktur des Elementbaums ist gleichzeitig das Fundament für die Modifikation des Erscheinungsbildes per 
             <mark>CSS </mark>
           </p>
           <p class="fragment">3: Neue (und alte) Javascript-Bibliotheken und Frameworks arbeiten massiv auf Basis der 
@@ -204,7 +204,6 @@
             <p>Es war einmal vor gar nicht so langer Zeit...</p>
           </div>
           <div class="fragment"><img style="background-color:white" width="25%" src="https://c2.staticflickr.com/4/3271/2818154005_7cc2cc90ef.jpg"><br><small>Bildquelle: <a href="https://www.flickr.com/photos/bradybd/2818154005" target="_blank">Flickr</a></small></div>
-          <!-- Too many different browsers now or then? -->
           <p class="fragment"> <i>Jeder Hersteller wollte etwas besonders gut können. Jede Version konnte etwas neues. Die Nutzer hatten verschiedene Browser in verschiedenen Versionen auf verschiedenen Systemen... </i></p>
           <p class="fragment">Anzahl Browser x Anzahl genutzte Versionen<br><small class="fragment">x Geräteklassen (Smartphones, Tablets, Autos...) </small><br>
             <div class="fragment">Ergebnis: Auf jeden Fall zuviel, vielzuviel!</div>
@@ -235,7 +234,6 @@
             </div>
             <div class="fragment">
               <mark>Und: Wissen ist Macht</mark>
-              <!-- relevanz? -->
               <p><a target="_blank" href="http://caniuse.com/#search=flexbox">caniuse flexbox?</a></p>
             </div>
           </p>
@@ -246,9 +244,8 @@
             <h4> 
               <blockquote>"Wir bauen eine Web-App, die die Profile der Wahlkreis-Kandidaten zur Berliner Abgeordnetenhauswahl auflistet und anzeigt."</blockquote>
             </h4>
-            <ul class="fragment">
-              <!-- idee -->
-              <li class="checked">(Fundamente) Web-Technologien &#10004;</li>
+            <ul class="fragment"> 
+              <li class="checked">(Fundamente) Web-Technologien (check)</li>
               <li class="unchecked">(Struktur) HTML (gleich)</li>
               <li class="unchecked">(Styling) CSS (später)</li>
               <li class="unchecked">(Entwicklung) Web-Apps (später) </li>
@@ -276,7 +273,7 @@
 &#x3C;body&#x3E;
  <!-- Sichtbarer Dokumentinhalt im body -->
  <p>Sehen Sie sich den Quellcode dieser Seite an.
-   <bold>(Kontextmenu: Seitenquelltext anzeigen)</bold>
+   <b>(Kontextmenu: Seitenquelltext anzeigen)</b>
  </p>
 &#x3C;/body&#x3E;
 </html></code></pre></i></p>
@@ -292,7 +289,7 @@
   <child-tag>Inhalt D></child-tag>
 </parent-tag></code></pre></i></p>
           <p class="fragment"><i><small>Manche Elemente haben keinen Inhalt, z.B. </small>
-              <pre style="width:80%;" class="fragment"><code class="hljs"><br>, <img>, <hr>, <input></code></pre></i></p>
+              <pre style="width:80%;" class="fragment"><code class="hljs"><br/>, <img/>, <hr/>, <input/></code></pre></i></p>
           <p class="fragment"><i><small>Elemente sollten generell immer geschlossen werden, auch die leeren Elemente. <br>Besser ist also die Schreibweise des br nach Inhalt B.</small><br><small class="fragment">Selbst wenn ein Browser den Inhalt vielleicht trotzdem korrekt anzeigt, kann es sein, <br>daß ein nachgelagerter komplexer Vorgang (z.B. ein Buildprozess) sonst fehlschlägt.</small><br><small class="fragment">Elemente sollten (!) nur in Kleinschrift benannt sein...</small></i></p>
         </section>
         <section>
@@ -307,7 +304,7 @@
 &#x3C;body style="background-color:blue" &#x3E;
  <!-- Sichtbarer Dokumentinhalt im body -->
  <p class="important">Sehen Sie sich den Quellcode dieser Seite an.
-   <bold>(Kontextmenu: Seitenquelltext anzeigen)</bold>
+   <b>(Kontextmenu: Seitenquelltext anzeigen)</b>
  </p>
 &#x3C;/body&#x3E;
 </html></code></pre></i>
@@ -318,7 +315,7 @@
         </section>
         <section>
           <h3>HTML - Element-Typen </h3>
-          <p class="fragment"> <i>Elemente haben unterschiedliche Grundeinstellungen in Bezug auf Ihre Anzeige und den Zeilenlauf</i></p>
+          <p class="fragment"> <i>Elemente haben unterschiedliche Grundeinstellungen in Bezug auf ihre Anzeige und den Zeilenlauf</i></p>
           <p class="fragment"> 
             <mark>Block-level Elemente </mark><br><span>div, h1..h6, p, form ...</span><br><i>..beginnen in einer neuen Zeile und nehmen den vollen Platz in der Breite ein </i>
           </p>
@@ -330,7 +327,7 @@
           <h3>Grundlegende HTML-Elemente </h3>
           <p class="fragment"> 
             <mark>div</mark>
-            <p class="fragment"> <i>..wird sehr of benutzt, um Blöcke von Inhalten zu bilden,<br>die dann per CSS gestaltet werden. </i><br><i>..verhält sich "visuell neutral" solange das styling nichts vorgibt. </i></p>
+            <p class="fragment"> <i>..wird sehr oft benutzt, um Blöcke von Inhalten zu bilden,<br>die dann per CSS gestaltet werden. </i><br><i>..verhält sich "visuell neutral" solange das styling nichts vorgibt. </i></p>
             <pre style="width:80%;" class="fragment"><code class="hljs"><div class="profil container">
   <div class="photo head"></div>
   <div class="person infos"></div>
@@ -367,7 +364,7 @@
         <section>
           <h3>Neue HTML5-Elemente </h3>
           <p class="fragment"> <span>..über 30 neue Elemente und diverse Attribute kamen mit HTML5 dazu</span>
-            <p class="fragment"> <i>Hier eine Auswahl der Elemente die speziell für die Strukturierung von Inhalten gedacht sind:</i></p>
+            <p class="fragment"> <i>Hier eine Auswahl der Elemente, die speziell für die Strukturierung von Inhalten gedacht sind:</i></p>
             <p>
               <mark class="fragment">header</mark>
               <mark class="fragment">nav</mark>
@@ -393,14 +390,14 @@
  </style>
  <link rel="stylesheet" href="stylesheet.css">
 &#x3C;/head&#x3E;
-&#x3C;body style="background-color:blue" &#x3E;
+&#x3C;body style="background-color:blue;" &#x3E;
  <!-- Sichtbarer Dokumentinhalt im body -->
  <p class="important">Sehen Sie sich den Quellcode dieser Seite an.
-   <bold>(Kontextmenu: Seitenquelltext anzeigen)</bold>
+   <b>(Kontextmenu: Seitenquelltext anzeigen)</b>
  </p>
 &#x3C;/body&#x3E;
 </html></code></pre></i>
-<p class="fragment"><small class="fragment">Eine Datei mit Style-Informationen ist nun mit der Seite verbunden. </small><br><small class="fragment">Der Browser verwendet diese, um die Oberfläche der Seite zu modifizieren.</small><br><small class="fragment">Wenn wir in der Datei "stylesheet.css" ein ".important: {color:red;}" hinzufügen, wird der Absatz in rot angezeigt.</small></p>
+            <p class="fragment"><small class="fragment">Eine Datei mit Styleinformationen ist nun mit der Seite verbunden. </small><br><small class="fragment">Der Browser verwendet diese, um die Oberfläche der Seite zu modifizieren.</small><br><small class="fragment">Wenn wir in der Datei "stylesheet.css" ein ".important: {color:red}" hinzufügen, wird der Absatz in rot angezeigt.</small></p>
           </p>
         </section>
         <section>
@@ -423,12 +420,12 @@
  <!-- Sichtbarer Dokumentinhalt im body -->
  <p class="crazy important">
      Sehen Sie sich den Quellcode dieser Seite an.
-   <bold>(Kontextmenu: Seitenquelltext anzeigen)</bold>
+   <b>(Kontextmenu: Seitenquelltext anzeigen)</b>
  </p>
  <script src="ressources/js/playWithDOMElements.js"></script>
 &#x3C;/body&#x3E;
 </html></code></pre></i>
-            <p class="fragment"><small class="fragment">Als erstes kommt per inline-js die eben geloggte Begrüssung.<br><span class="fragment">Und im HEAD wird Modernizr eingebunden, danach wissen wir eine Menge über den Browser der hier benutzt wird.. </span><br><span class="fragment">Und ganz am Ende des BODY laden wir noch ein Skript was irgendwelche verrückten Dinge mit dem Inhalt der (dann hoffentlich vollständig geladenen) Seite tun könnte.</span>
+            <p class="fragment"><small class="fragment">Als erstes kommt per inline-js die eben geloggte Begrüssung.<br><span class="fragment">Und im HEAD wird Modernizr eingebunden, danach wissen wir eine Menge über den Browser, der hier benutzt wird.. </span><br><span class="fragment">Und ganz am Ende des BODY laden wir noch ein Skript, was irgendwelche verrückten Dinge mit dem Inhalt der (dann hoffentlich vollständig geladenen) Seite tun könnte.</span>
                 <div class="fragment">(In der Console dieses Browsers sind übrigens gerade ein paar Dinge geschehen..)</div></small></p>
           </p>
         </section>
@@ -437,7 +434,7 @@
           <p class="fragment"> <i>Es gibt dutzende gute (und noch mehr weniger gute) Frameworks, die eine Basis für die Webentwicklung mit HTML, CSS und Javascript mitbringen und das Arbeiten damit leichter machen. </i></p>
           <p class="fragment"> <i>Es ist zwar sehr unfair - aber wir erwähnen hier jetzt nur eins, weil es das derzeit am weitesten verbreitete ist: Bootstrap</i></p>
           <p class="fragment">In a nutshell: "Bootstrap ist das beliebteste Framework mit HTML, CSS und JS für die Entwicklung von anpassungsfähigen Projekten für das moderne Web."</p>
-          <mark class="fragment">also: <a href="https://getbootstrap.com" target="_blank">getbootstrap.com</a></mark>
+          <mark class="fragment">also: getbootstrap.com</mark>
         </section>
         <section>
           <div>
@@ -455,39 +452,40 @@
               <mark>Aufgaben:</mark><br>
               <div class="tasks">
                 <div class="fragment">STEP1: Seite mit Grundstruktur HTML und Bootstrap anlegen.</div>
-                <div class="fragment">STEP2: Darin eine (möglichst sinnvolle) <br>Inhaltstruktur mit HTML-Elementen aufbauen.  </div>
+                <div class="fragment">STEP2: Darin eine (möglichst sinnvolle) <br>Inhaltstruktur mit HTML-Elementen für MAIN HEADER aufbauen.  </div>
               </div>
             </p>
           </div>
         </section>
         <section>
           <h3>Challenge - STEP1</h3>
-          <h6>Basis einrichten und Bootstrap einabauen.</h6>
+          <h6>Basis einrichten und Bootstrap einbauen.</h6>
           <p class="fragment"> <i>Projektordner anlegen, z.B.  </i>c:\dev\challenge</p>
-          <p class="fragment"><i>Bootstrap <a href="http://getbootstrap.com/getting-started/#download" target="_blank">herunterladen</a>, auspacken und dort unter </i>c:\dev\challenge\libs\bootstrap <i>hineinkopieren.</i></p>
+          <p class="fragment"><i>Bootstrap herunterladen, auspacken und dort unter </i>c:\dev\challenge\libs\bootstrap <i>hineinkopieren.</i></p>
           <p class="fragment"><i>Im Projektordner eine Seite </i>(challenge.html)<i>mit Grundstruktur HTML und Bootstrap anlegen.</i><br></p>
-          <p class="fragment"> <i>Diese von <a href="http://getbootstrap.com/getting-started/#template" target="_blank">Bootstrap </a><i>oder aus dem Ordner snippets/step1-bs-basic-template.html übernehmen. </i></i></p>
+          <p class="fragment"> <i>Diese von <a href="http://getbootstrap.com/getting-started/#template" target="_blank">Bootstrap </a><i>oder aus dem Ordner challenge-snippets/step1-bs-basic-template.html übernehmen. </i></i></p>
         </section>
         <section>
           <h3>Challenge - STEP2 </h3>
           <h6>Musterhafte Inhaltsstruktur im BODY. </h6>
           <p class="fragment"> <i>In der Datei </i>c:\dev\challenge.html</p>
-          <p class="fragment"><i>eine Struktur ähnlich wie in diesem Snippet aufbauen: </i><br>snippets\step2-content-structure.html<br><i>(Das Snippet kann gegen den BODY der bisherigen Datei ausgetauscht werden)</i></p>
+          <p class="fragment"><i>eine Struktur ähnlich wie in diesem Snippet aufbauen: </i><br>challenge-snippets\step2-content-structure.html<br><i>(Das Snippet kann den BODY der bisherigen Datei ersetzen)</i></p>
+          <p class="fragment"><i>Und eine Basis für ein späteres Bootstrap-Menu:</i><br>challenge-snippets\step2-bs-header.html<br><i>(Das Snippet kann direkt nach dem öffnenden BODY integriert werden)</i></p>
           <p class="fragment"> <i>Die Datei "challenge.html" enthält jetzt ordentlich strukturiertes Markup anhand von zwei Beispielen mit Daten aus der API von </i><a target="_blank" href="https://www.abgeordnetenwatch.de/api">abgeordnetenwatch.de </a><br><small>(Vielen Dank für die gute Arbeit und sogar eine API!)</small></p>
         </section>
         <section>
           <h3>CSS - cascading style sheets?</h3>
           <p class="fragment">= styling des Erscheinungsbildes und Verhaltens von HTML-Elementen</p>
           <p class="fragment"> <i>cascading??? <br>
-            <mark class="fragment">Kaskadierend??</mark><br></i>
+              <mark class="fragment">Kaskadierend??</mark><br></i>
             <div class="fragment">Styles werden an alle auf die gewählten Selektoren "passenden" Elemente (in der Reihenfolge Ihrer Spezifität) zugewiesen.</div>
           </p>
           <p class="fragment"> <i> 
-            <mark>Selektoren? </mark><br></i>
+              <mark>Selektoren? </mark><br></i>
             <div class="fragment">..werden benutzt um Elemente in eine Formatierung einzubeziehen. Selektoren können miteinander kombiniert werden.  </div>
           </p>
           <p class="fragment"> <i> 
-            <mark>Spezifität?</mark><br></i>
+              <mark>Spezifität?</mark><br></i>
             <div class="fragment">..bedeutet, daß unterschiedliche Selektoren unterschiedlich stark gewichtet werden (können).  </div>
           </p>
         </section>
@@ -497,11 +495,11 @@
             <mark class="fragment">.hintergrund </mark><br>
             <div class="fragment">..erfasst Elemente die das Attribut class="hintergrund" haben. </div>
           </p>
-          <p class="fragment">Elemente  <br>
+          <p class="fragment">Element  <br>
             <mark class="fragment">p </mark><br>
             <div class="fragment">erfasst alle Absätze </div>
           </p>
-          <p class="fragment">ID's <br>
+          <p class="fragment">ID <br>
             <mark class="fragment">#logo </mark><br>
             <div class="fragment">erfasst das Element, dessen Attribut ID="logo" gesetzt hat.</div>
           </p>
@@ -510,7 +508,7 @@
           <h3>CSS - Kombination von Selektoren </h3>
           <p class="fragment"> 
             <mark class="fragment">section.important</mark><br>
-            <div class="fragment">Erfasst alle Elemente vom Typ "section" die die Klasse "important" gesetzt haben </div>
+            <div class="fragment">Erfasst alle Elemente vom Typ "section", die die Klasse "important" gesetzt haben </div>
           </p>
           <p class="fragment"> 
             <mark class="fragment">#logo.important</mark><br>
@@ -525,15 +523,15 @@
           <h3>CSS - Kombination von Selektoren </h3>
           <p class="fragment"> 
             <mark class="fragment">.really.important</mark><br>
-            <div class="fragment">Erfasst Elemente die die Klassen "important" und "really" gesetzt haben (AND) </div>
+            <div class="fragment">Erfasst Elemente, die die Klassen "important" und "really" gesetzt haben (AND) </div>
           </p>
           <p class="fragment"> 
             <mark class="fragment">.important, .notice</mark><br>
-            <div class="fragment">Erfasst Elemente die die Klassen "important" oder "notice" gesetzt haben (OR). </div>
+            <div class="fragment">Erfasst Elemente, die die Klassen "important" oder "notice" gesetzt haben (OR). </div>
           </p>
           <p class="fragment"> 
             <mark class="fragment">.dialog .important</mark><br>
-            <div class="fragment">Erfasst Elemente die die Klasse "important" gesetzt haben und ein übergeordnetes Element besitzen, welches die Klasse "dialog" hat. </div>
+            <div class="fragment">Erfasst Elemente, die die Klasse "important" gesetzt haben und ein übergeordnetes Element besitzen, welches die Klasse "dialog" hat. </div>
           </p>
         </section>
         <section>
@@ -568,20 +566,20 @@
           </div>
           <div class="fragment">
             <pre style="width:80%;"><code class="hljs">...
-              <ul class="nav navbar-nav">
-                <li class="active">
-                  <a href="#">Link A</a>
-                </li>
-                <li><a href="#">Link B</a></li>
-              </ul>
+<ul class="nav navbar-nav">
+  <li class="active">
+    <a href="#">Link A</a>
+  </li>
+  <li><a href="#">Link B</a></li>
+</ul>
 ...</code></pre>
           </div>
         </section>
         <section>
           <h3>CSS - Responsive design</h3>
           <p class="fragment"> <i> <br>
-            <mark>"mobile first" </mark><br>
-            <div class="fragment"> > Design beginnt bei der "kleinsten" Geräteklasse </div></i></p>
+              <mark>"mobile first" </mark><br>
+              <div class="fragment"> > Design beginnt bei der "kleinsten" Geräteklasse </div></i></p>
           <mark class="fragment">Konsequenzen: </mark>
           <p class="fragment">Fokus aufs Wesentliche</p>
           <p class="fragment">Gut durchdenken!</p>
@@ -593,11 +591,11 @@
         <section>
           <h3>CSS - Media queries</h3>
           <p class="fragment"> <i> <br>
-            <mark>@media ("Merkmale und Kriterien") {"angewendete Styles"} </mark><br></i>
+              <mark>@media ("Merkmale und Kriterien") {"angewendete Styles"} </mark><br></i>
             <div class="fragment">Bei Vorliegen bestimmter Kriterien sollen die angegebenen Styles zur Anwendung kommen. </div>
           </p>
           <p class="fragment"> <i>Ein Beispiel:<br>
-            <mark>@media (min-width: 768px) {p:{color:red}} </mark><br></i>
+              <mark>@media (min-width: 768px) {p:{color:red}} </mark><br></i>
             <div class="fragment">..bewirkt, daß sich ab einer Bildschirmgröße von 768px die Farbe der Absätze ändert.</div>
           </p>
           <p class="fragment">Merkmale können auch mit logischen Operatoren verbunden werden:  <br>
@@ -607,16 +605,16 @@
         <section>
           <h3>Bootstrap - Grid-System</h3>
           <p class="fragment"> <i>Es gibt (für feste und variable Breiten)<br>
-            <mark>.container </mark><br>als Behälter für Zeilen </i></p>
+              <mark>.container </mark><br>als Behälter für Zeilen </i></p>
           <p class="fragment"> <i> 
-            <mark>.row </mark><br>als Zeilen, um horizontale Gruppen zu bilden </i></p>
+              <mark>.row </mark><br>als Zeilen, um horizontale Gruppen zu bilden </i></p>
           <p class="fragment"> <i> 
-            <mark>.col-xy-z </mark><br>um Spalten innerhalb von Zeilen zu bilden </i></p>
+              <mark>.col-xy-z </mark><br>um Spalten innerhalb von Zeilen zu bilden </i></p>
         </section>
         <section>
           <h3>Bootstrap - Grid-System</h3>
           <p class="fragment"> <i>Es gibt normalerweise ein Grid mit:<br>
-            <mark>12 Spalten</mark></i></p>
+              <mark>12 Spalten</mark></i></p>
           <p class="fragment"> <i>und normalerweise die vier Geräteklassen:</i></p>
           <p class="fragment"> <i> "extra small devices"</i><br>
             <mark>xs</mark><i>  (viewport bis 768px) </i>
@@ -634,11 +632,11 @@
         <section>
           <h3>Bootstrap - Grid-System</h3>
           <p class="fragment"> <i>Also z.B.: <br>
-            <mark>.col-md-3 </mark><br>für eine Spalte mit 3/12 Breite des Containers </i></p>
+              <mark>.col-md-3 </mark><br>für eine Spalte mit 3/12 Breite des Containers </i></p>
           <p class="fragment"> <i>für die Geräteklassen ab (>992px)<br>
-            <mark>md </mark><br></i></p>
+              <mark>md </mark><br></i></p>
           <p class="fragment"> <i>Oder: <br>
-            <mark>.col-xs-6 </mark><br>für eine Spalte mit 6/12 Breite des Containers <br>für ALLE Geräteklasse (weil für xs und darüber)</i></p>
+              <mark>.col-xs-6 </mark><br>für eine Spalte mit 6/12 Breite des Containers <br>für ALLE Geräteklasse (weil für xs und darüber)</i></p>
         </section>
         <section>
           <div>
@@ -656,7 +654,6 @@
               <mark>Aufgaben:</mark><br>
               <div class="tasks">
                 <div class="fragment">STEP3: Seite für Bootstrap erweitern und Bootstrap-Klassen zuweisen.</div>
-                <!-- ?? -->
                 <div class="fragment">STEP4: Etwas eigene Semantik ist sinnvoll: item, photo, person, hintergrund </div>
               </div>
             </p>
@@ -664,23 +661,22 @@
         </section>
         <section>
           <h3>Challenge - STEP3</h3>
-          <h6>Bootstrap Menu vervollständigen</h6>
+          <h6>Noch eine Prise Bootstrap Menu hinzufügen</h6>
           <p class="fragment"> <i>In der Datei </i>c:\dev\challenge.html</p>
-          <p class="fragment"><i>fehlen noch ein paar Details für ein responsives Menu mit Dropdown.</i><br>snippets\step3-dropdown-menu-item.html<br><i>passt gut hinter das letzte LI in HEADER > NAV > UL </i></p>
-          <!-- collapse not in step2 snippet -->
-          <p class="fragment"><i>und für ein responsives Ausklapp-Menu brauchen wir noch</i><br>snippets\step3-responsive-menu.html<br><i>das gehört direkt in HEADER > NAV vor das DIV mit dem collapse</i></p>
-          <p class="fragment"><i>Das Ergebnis der Operation sollte in etwa so aussehen:</i><br>snippets\step3-result.html</p>
+          <p class="fragment"><i>fehlen noch ein paar Details für ein responsives Menu mit Dropdown.</i><br>challenge-snippets\step3-dropdown-menu-item.html<br><i>passt gut hinter das letzte LI in HEADER > NAV > UL </i></p>
+          <p class="fragment"><i>und für ein responsives Ausklapp-Menu brauchen wir noch</i><br>challenge-snippets\step3-responsive-menu.html<br><i>das gehört direkt in HEADER > NAV vor das DIV mit dem collapse</i></p>
         </section>
         <section>
           <h3>Challenge STEP3</h3>
-          <h6>..und Bootstrap Container-Klassen als Basis einmengen.</h6>
-          <p class="fragment">Wir strukturieren den Header so, daß er über die komplette Breite läuft (container-fluid).</p>
-          <p class="fragment">Und der Platz dort zu 4/12 vom Titel und zu 8/12 vom Menu ausgefüllt wird.</p>
-          <p class="fragment">Dann geben wir MAIN noch einen container (fixer Breite) und geben den SECTIONs je eine row.</p>
-          <p class="fragment">Beim H1 Titel müssen wir noch eine col-md-12 vergeben, damit die korrekte Breite des Inhalts von Bootstrap gesetzt werden kann.</p>
-          <p class="fragment">Jedem ARTICLE geben wir eine 50% Spaltenbreite (col-md-6).</p>
-          <p class="fragment">Und strukturieren den Inhalt jeweils mit zwei Zeilen (row), in denen wir je eine Aufteilung 3/12 und 9/12 vornehmen.</p>
-          <p class="fragment">Dies bei der ersten und der zweiten row gleichermaßen.</p>
+          <h6>..und weitere Bootstrap Container-Klassen als Basis einrühren.</h6>
+          <p class="fragment"> <small>Wir strukturieren den Header so, daß er über die komplette Breite läuft (container-fluid).</small></p>
+          <p class="fragment"> <small>Und der Platz dort zu 4/12 vom Titel und zu 8/12 vom Menu ausgefüllt wird.</small></p>
+          <p class="fragment"> <small>Dann geben wir MAIN noch einen container (fixer Breite) und geben den SECTIONs je eine row.</small></p>
+          <p class="fragment"> <small>Beim H1 Titel müssen wir noch eine col-md-12 vergeben, <br>damit die korrekte Breite des Inhalts von Bootstrap gesetzt werden kann.</small></p>
+          <p class="fragment"> <small>Jedem ARTICLE geben wir eine 50% Spaltenbreite (col-md-6).</small></p>
+          <p class="fragment"> <small>Und strukturieren den Inhalt jeweils mit zwei Zeilen (row), <br>in denen wir je eine Aufteilung 3/12 und 9/12 vornehmen.</small></p>
+          <p class="fragment"> <small>Dies bei der ersten und der zweiten row gleichermaßen.</small></p>
+          <p class="fragment"><i>Das Ergebnis der Operation sollte in etwa so aussehen:</i><br>challenge-snippets\step3-result.html</p>
         </section>
         <section>
           <h3>Challenge - STEP4</h3>
@@ -698,7 +694,7 @@
           <p class="fragment">
             <mark>hintergrund</mark><i> beim DIV um die Ausbildung </i>
           </p>
-          <p class="fragment"><i>Das Ergebnis der Operationen sollte in etwa so aussehen:</i><br>snippets\step4-result.html</p>
+          <p class="fragment"><i>Das Ergebnis der Operationen sollte in etwa so aussehen:</i><br>challenge-snippets\step4-result.html</p>
         </section>
         <section>
           <h3>CSS - Box-Modell</h3>
@@ -726,7 +722,7 @@
             <mark>static</mark><br><i class="fragment">..die Standardeinstellung, belässt Elemente im Zeilenlauf </i>
           </p>
           <p class="fragment">position:
-            <mark>absolute</mark><br><i class="fragment">..Elemente wird vom Zeilenlauf losgelöst im nächsthöheren (mit z.B. position:relative definierten) Element erzeugt und kann mit diversen Angaben positioniert und in seiner Größe definiert werden. </i>
+            <mark>absolute</mark><br><i class="fragment">..Element wird vom Zeilenlauf losgelöst im nächsthöheren (mit z.B. position:relative definierten) Element erzeugt und kann mit diversen Angaben positioniert und in seiner Größe definiert werden. </i>
           </p>
           <p class="fragment">position:
             <mark>fixed</mark><br><i class="fragment">..Element wird absolut positioniert, aber alle Angaben zur Ausrichtung beziehen sich auf den Viewport des Browsers. Nützlich für feststehende Elemente in Seiten.</i>
@@ -741,13 +737,13 @@
             <mark>none</mark><br><i class="fragment">..die Standardeinstellung, Element wird nicht verschoben </i>
           </p>
           <p class="fragment">float:
-            <mark>left / right</mark><br><i class="fragment">..Element wird an die linke oder rechte Kante des (nächst höheren) Elternelements verschoben.</i>
+            <mark>left / right</mark><br><i class="fragment">..Element wird an die linke oder rechte Kante des (nächsthöheren) Elternelements verschoben.</i>
           </p>
           <p class="fragment">float:
             <mark>inherit</mark><br><i class="fragment">..Element erbt die float-Eigenschaft des Elternelements</i>
           </p>
           <p class="fragment">clear:
-            <mark>none / left / right / both / inherit</mark><br><i class="fragment">..wird verwendet um zu verhindern, daß ein Element von floatenden anderen Elementen verdeckt werden kann.</i>
+            <mark>none / left / right / both / inherit</mark><br><i class="fragment">..wird verwendet, um zu verhindern, daß ein Element von floatenden anderen Elementen verdeckt werden kann.</i>
           </p>
           <p class="fragment">Anmerkung:
             <mark>floats..</mark><br><i class="fragment">dienen 
@@ -758,7 +754,7 @@
         <section>
           <h3>CSS - FlexBox</h3>
           <p class="fragment">Endlich da, aber noch selten genutzt.
-            <p class="fragment">Ermöglicht den Fluss von Elementen, über eine saubere Spezifikation zu steuern. </p>
+            <p class="fragment">Ermöglicht den Fluss von Elementen über eine saubere Spezifikation zu steuern. </p>
             <p class="fragment"> <i>..was normalerweise mit einem Durcheinander von <br>positions, floats und clears erreicht(..) wird.</i></p>
             <p class="fragment">Mit FlexBox sind 
               <mark>komplexe Layouts</mark> möglich, die dazu noch 
@@ -814,12 +810,11 @@
               <mark>Aufgaben:</mark><br>
               <div class="tasks">
                 <div class="fragment">STEP5: Eine separate(!) css-Datei für unsere Bootstrap-Modifikationen (in einem Unterordner) einbinden.</div>
-                <div class="fragment">STEP6: Hintergrundfarben für Main-Inhalt und Header und andere Schrift für Titel und ein nettes Hintergrundbild</div>
+                <div class="fragment">STEP6: Hintergrundfarben für Main-Inhalt und Header; und andere Schrift für Titel sowie ein nettes Hintergrundbild</div>
                 <div class="fragment">STEP7: Fonts aussuchen, einbetten und den h1-tags zuweisen</div>
                 <div class="fragment">STEP8: Die Container der articles und der Bereiche darin etwas abgrenzen, z.B. mit Hintergrundfarben, oder border, oder shadow.  </div>
                 <div class="fragment">STEP9: Bild korrigieren und um die Bilder ein padding als Abstand und eine Linie als Abgrenzung.</div>
-                <div class="fragment">STEP10: Name bündig mit Bildoberkante und die Absätze bei Person etwas größer setzen. Etwas padding für Person und Hintergrund sowie zwei verschiedene Hintergrundfarben setzen.
-                </div>
+                <div class="fragment">STEP10: Name bündig mit Bildoberkante setzen und die Absätze bei Person etwas größer und etwas padding für person und Hintergrund und zwei verschiedene Hintergrundfarben setzen...</div>
               </div>
             </p>
           </div>
@@ -833,13 +828,13 @@
             </p>
           </div>
           <p class="fragment">Und im BODY gleich noch eine Klasse "challenge" aufnehmen, die wir später zum Überschreiben von Styles verwenden könnten. <br><i><small>(Hilfreich, wenn die Selektoren zu einem Style nicht spezifisch genug sind. Dann kann man sie damit spezifischer machen. Wir wollen ja keineswegs im bootstrap.css direkt Änderungen einbauen...)</small></i></p>
-          <p class="fragment"><i>Das Ergebnis sollte so aussehen wie hier:</i><br>snippets\step3-result.html<br><i>..sowie eine (noch) leere Datei unter </i>challenge\css\challenge-theme.css</p>
+          <p class="fragment"><i>Das Ergebnis sollte so aussehen wie hier:</i><br>challenge-snippets\step5-result.html<br><i>..sowie eine (noch) leere Datei unter </i>challenge\css\challenge-theme.css</p>
         </section>
         <section>
           <h3>Challenge - STEP6 bis 10</h3>
           <h6>Endlich mal CSS-Styles ausprobieren.</h6>
           <p class="fragment">Nun ist es an der Zeit einfach mal zu schauen, <br>was man mit Styling so alles anstellen kann.</p>
-          <p class="fragment"><i>Das Ergebnis könnte so (oder erheblich schöner) aussehen wie hier:</i><br>snippets\step6bis10-result-challenge-theme.css</p>
+          <p class="fragment"><i>Das Ergebnis könnte so (oder erheblich schöner) aussehen wie hier:</i><br>challenge-snippets\step6bis10-result-challenge-theme.css</p>
         </section>
         <section>
           <h2>Dynamische Web-Apps</h2>
@@ -880,7 +875,7 @@
               <mark>Aufgaben:</mark><br>
               <div class="tasks">
                 <div class="fragment">STEP11: ng2 quickstarter..</div>
-                <div class="fragment">STEP12: Ordner und HTML-Datein integrieren..</div>
+                <div class="fragment">STEP12: Ordner und HTML-Dateien integrieren..</div>
                 <div class="fragment">STEP13: Daten per http in ng2 app bereitstellen..</div>
                 <div class="fragment">STEP14: imports und Module für die Nutzung von http (!) in ng2 konfigurieren..</div>
                 <div class="fragment">STEP15: Nun (endlich) ein Template für die Anzeige der Profile..</div>
@@ -931,7 +926,7 @@ npm start
             </p>
           </div>
           <div class="fragment">
-            <p>	Aus unserer challenge.html Seite den Inhalt aus BODY kopieren und in der index.html im BODY einfügen.</p>
+            <p>	Aus unserer challenge.html Seite den BODY kopieren und den in der index.html ersetzen.</p>
           </div>
           <div class="fragment">
             <p>	Und dann dies anstelle der beiden ARTICLE Elemente einfügen:
@@ -948,7 +943,7 @@ npm start
             </p>
           </div>
           <div class="fragment">
-            <p>Dann in app.component.js AppComponent{} erweitern um:
+            <p>Dann in app\app.component.ts AppComponent{} erweitern um:
               <pre> <code>candidates={};
  
 constructor(private http: Http) {
@@ -965,20 +960,23 @@ constructor(private http: Http) {
           <h3>Challenge - STEP14</h3>
           <h6>http (etc) in der App verfügbar machen.</h6><small>(jede Menge imports..) </small>
           <div class="fragment">
-            <p>In der app.component.js:
+            <p>In der app\app.component.ts ganz open einfügen:
               <pre> <code>import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 import { HttpModule } from '@angular/http';</code></pre>
             </p>
           </div>
           <div class="fragment">
-            <p>und in app.module.ts ngmodule konfigurieren:
-              <pre> <code>imports: [BrowserModule, HttpModule],
+            <p>Ebenfalls oben importiere:
+              <pre><code>import { HttpModule } from '@angular/http';</code></pre>
+            </p>
+          </div>
+          <p>und in app\app.module.ts @NgModule anpassen:
+            <pre> <code>imports: [BrowserModule, HttpModule],
 providers: [],
 declarations: [AppComponent],
 bootstrap: [AppComponent]</code></pre>
-            </p>
-          </div>
+          </p>
         </section>
         <section>
           <h3>Challenge - STEP15</h3>
@@ -989,7 +987,7 @@ bootstrap: [AppComponent]</code></pre>
             </p>
           </div>
           <div class="fragment">
-            <p>und in der (neu anzulegenden) Datei app/challenge.component.html<br>einen der beiden article-tags mit seinem Inhalt als Vorlage einfügen.</p>
+            <p>und in der (neu anzulegenden) Datei app/challenge.component.html<br>einen der beiden article-tags aus challenge.html mit seinem Inhalt als Vorlage einfügen.</p>
           </div>
           <div class="fragment">
             <p>und darunter (damit wir sehen ob die Daten geholt werden):
@@ -1011,11 +1009,11 @@ Origin 'http://localhost:3000' is therefore not allowed access.</code></pre>
             <p>Für eine Einführung in CORS fehlt jetzt die Zeit, <br>aber <a target="_blank" href="http://restlet.com/blog/2015/12/15/understanding-and-using-cors/">hier</a> gibt es detaillierte Infos. </p>
           </div>
           <div class="fragment">
-            <p><small>Zusammenfassend: Der Server, der "cross-site" angefragt wird, liefert eine Information zurück, welche Domains ihn fragen dürfen und der Browser entscheidet anhand dessen und anhand der Herkunfts-Domäne, ob dieser Request erlaubt ist.</small><br><small>In unserem Fall erlaubt dies Abgeordnetenwatch leider (noch) nicht, aber vielleicht macht man sich auch Sorgen um Überlastung, da Requests dort manchmal 30 Sekunden dauern können...</small><br>
+            <p><small>Zusammenfassend: Der Server, der "cross-site" angefragt wird, liefert eine Information zurück, welche Domains ihn fragen dürfen. Der Browser entscheidet anhand dessen und anhand der Herkunfts-Domäne, ob dieser Request erlaubt ist.</small><br><small>In unserem Fall erlaubt dies Abgeordnetenwatch leider (noch) nicht, aber vielleicht macht man sich auch Sorgen um Überlastung, da Requests dort manchmal 30 Sekunden dauern können...</small><br>
               <div class="fragment"><small>Schade - aber wir können ja die Datei auch einfach mal im Browser von der Url direkt runterladen und dann <br>lokal ablegen unter "app/candidates.json"</small></div>
             </p>
             <div class="fragment">
-              <p><small>Dann müssen wir aber den Request in app.component.js noch ändern auf:</small>
+              <p><small>Dann müssen wir aber den Request in app\app.component.js noch ändern auf:</small>
                 <pre><code>http.get('app/candidates.json')</code></pre><small>(Nun werden die json-Daten direkt lokal von unserem Testserver ausgeliefert.)</small>
               </p>
             </div>
@@ -1025,7 +1023,6 @@ Origin 'http://localhost:3000' is therefore not allowed access.</code></pre>
           <h3>Challenge - STEP17</h3>
           <h6>Dann endlich weiter mit den Templates.</h6><small>(..finally the fun part) </small>
           <div class="fragment"><small>Eine For-Schleife beim ARTICLE:</small>
-            <!-- *ngFor is case senstivice but is transformed into lowercase - was not able to find a fix -->
             <pre> <code class="html"><article *ngFor="let profile of candidates.profiles; let i = index">...</article></code></pre>
           </div>
           <div class="fragment"><small> <br>Den h3 mit dem Name ändern in:</small>
